@@ -1,13 +1,22 @@
 :root {
-  --pm-white: #ffffff;
-  --pm-pink: #f4b6c6;
-  --pm-pink-light: #f9d7de;
-  --pm-aqua-light: #d7eef1;
-  --pm-aqua: #a8d3d6;
-  --pm-sage: #c8ddb8;
-  --pm-lime: #e0e9a8;
-  --pm-teal: #7db0ad;
-  --pm-teal-dark: #1f4d4d;
+  --dm-white: #ffffff;
+  --dm-pink: #f4b6c6;
+  --dm-pink-light: #f9d7de;
+  --dm-aqua-light: #d7eef1;
+  --dm-aqua: #a8d3d6;
+  --dm-sage: #c8ddb8;
+  --dm-lime: #e0e9a8;
+  --dm-teal: #7db0ad;
+  --dm-teal-dark: #1f4d4d;
+  --pm-white: var(--dm-white);
+  --pm-pink: var(--dm-pink);
+  --pm-pink-light: var(--dm-pink-light);
+  --pm-aqua-light: var(--dm-aqua-light);
+  --pm-aqua: var(--dm-aqua);
+  --pm-sage: var(--dm-sage);
+  --pm-lime: var(--dm-lime);
+  --pm-teal: var(--dm-teal);
+  --pm-teal-dark: var(--dm-teal-dark);
   --pm-teal-deep: var(--pm-teal-dark);
   --pm-ink-soft: rgba(31, 77, 77, 0.78);
   --pm-line: rgba(31, 77, 77, 0.13);
@@ -204,18 +213,21 @@ a {
   position: relative;
   display: block;
   flex: 0 0 auto;
-  aspect-ratio: 1.35;
-  overflow: hidden;
+  height: auto;
+  padding: 2px;
+  overflow: visible;
+  line-height: 0;
 }
 
 .growth-map-artwork {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 145% !important;
-  max-width: none !important;
+  position: static;
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
   height: auto !important;
-  transform: translate(-50%, -50%);
+  object-fit: contain;
+  object-position: center;
+  transform: none;
 }
 
 /* Header */
@@ -2680,6 +2692,298 @@ a {
 
   .gate-input-row button {
     min-height: 53px;
+  }
+}
+
+/* DevelopMonth Phase 1: check-ins, support flags, and complete icon framing */
+
+.brand-icon {
+  width: 118px;
+  margin: -20px -10px;
+}
+
+.brand-lockup-footer .brand-icon {
+  width: 132px;
+  margin: -24px -12px;
+}
+
+.hero-brand-media {
+  width: min(118%, 720px);
+  aspect-ratio: 1;
+  overflow: visible;
+}
+
+.hero-brand-static {
+  overflow: visible;
+}
+
+.hero-brand-static .hero-brand-icon {
+  width: 100%;
+  overflow: visible;
+}
+
+.hero-brand-labels {
+  margin-top: -150px;
+}
+
+.gate-logo {
+  width: 142px;
+  margin: -25px -16px;
+}
+
+.foundation-brand-develop .foundation-icon {
+  width: 330px;
+  max-height: none;
+}
+
+.research-mission-icon {
+  width: 430px;
+  max-width: 100%;
+}
+
+.month-pack-final-icon {
+  right: 4px;
+  bottom: 2px;
+  width: 58%;
+  padding: 4px;
+  border-radius: 28px 70px 70px 28px;
+  background: #ffffff;
+  overflow: visible;
+}
+
+.assessment-domain-list {
+  display: flex;
+  max-width: 650px;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 34px;
+}
+
+.assessment-domain-list span {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(31, 77, 77, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--pm-teal-dark);
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.development-check-in-card {
+  min-height: 720px;
+}
+
+.development-check-in-card .month-support-pack-list {
+  grid-template-columns: 1fr;
+}
+
+.development-check-in-card .month-support-pack-list span {
+  min-height: 52px;
+  border-right: 0;
+}
+
+.development-check-in-card .month-support-pack-list span:nth-child(odd) {
+  border-right: 0;
+}
+
+.check-in-next-steps {
+  display: grid;
+  margin-top: 28px;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.check-in-next-steps span {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--pm-aqua-light);
+  color: var(--pm-teal-dark);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.check-in-next-steps span:nth-child(2) {
+  background: var(--pm-sage);
+}
+
+.check-in-next-steps span:nth-child(3) {
+  background: var(--pm-lime);
+}
+
+.check-in-next-steps span:nth-child(4) {
+  border: 1px solid var(--pm-teal);
+  background: #ffffff;
+}
+
+.support-flags-section {
+  background: var(--pm-lime);
+}
+
+.support-flags-grid {
+  display: grid;
+  margin-top: 70px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.support-flag {
+  position: relative;
+  min-height: 340px;
+  padding: 38px 34px;
+  overflow: hidden;
+  border: 1px solid rgba(31, 77, 77, 0.08);
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgba(31, 77, 77, 0.09);
+}
+
+.support-flag::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10px;
+  background: var(--pm-sage);
+  content: "";
+}
+
+.support-flag-amber::before {
+  background: var(--pm-lime);
+}
+
+.support-flag-urgent::before {
+  background: var(--pm-teal);
+}
+
+.support-flag > span {
+  display: block;
+  color: rgba(31, 77, 77, 0.48);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.support-flag h3 {
+  max-width: 260px;
+  margin: 78px 0 0;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.support-flag p {
+  margin: 22px 0 0;
+  color: var(--pm-ink-soft);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.support-flags-note {
+  max-width: 900px;
+  margin: 42px auto 0;
+  padding: 20px 26px;
+  border: 1px solid rgba(31, 77, 77, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--pm-ink-soft);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.additional-needs-copy > p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 30px 0 0;
+  color: var(--pm-ink-soft);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.additional-needs-copy .additional-needs-detail {
+  padding-top: 26px;
+  border-top: 1px solid rgba(31, 77, 77, 0.14);
+  font-size: 13px;
+}
+
+@media (max-width: 1120px) {
+  .hero-brand-media {
+    width: min(112%, 650px);
+  }
+
+  .hero-brand-labels {
+    margin-top: -132px;
+  }
+
+  .support-flags-grid {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 940px) {
+  .hero-brand-media {
+    width: min(100%, 680px);
+  }
+
+  .support-flags-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-flag {
+    min-height: 265px;
+  }
+
+  .support-flag h3 {
+    margin-top: 54px;
+  }
+}
+
+@media (max-width: 700px) {
+  .brand-icon {
+    width: 102px;
+    margin: -17px -9px;
+  }
+
+  .hero-brand-media {
+    width: 100%;
+  }
+
+  .hero-brand-labels {
+    margin-top: -92px;
+  }
+
+  .gate-logo {
+    width: 118px;
+    margin: -20px -13px;
+  }
+
+  .development-check-in-card {
+    min-height: 700px;
+  }
+
+  .check-in-next-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .support-flags-grid {
+    margin-top: 48px;
+  }
+
+  .support-flags-note {
+    border-radius: 24px;
+    text-align: left;
+  }
+
+  .foundation-brand-develop .foundation-icon {
+    width: min(100%, 320px);
   }
 }
 
@@ -5274,5 +5578,117 @@ a {
     border-right: 1px solid var(--pm-line);
     border-bottom: 1px solid var(--pm-line);
     border-left: 1px solid var(--pm-line);
+  }
+}
+
+/* Final Phase 1 placement safeguards: keep the complete GrowthMap visible. */
+
+.brand-icon {
+  width: 118px;
+  margin: -20px -10px;
+}
+
+.brand-lockup-footer .brand-icon {
+  width: 132px;
+  margin: -24px -12px;
+}
+
+.hero-brand-media {
+  width: min(118%, 720px);
+  aspect-ratio: 1;
+  overflow: visible;
+}
+
+.hero-brand-static,
+.hero-brand-static .hero-brand-icon {
+  overflow: visible;
+}
+
+.hero-brand-static .hero-brand-icon {
+  width: 100%;
+}
+
+.hero-brand-labels {
+  margin-top: -150px;
+}
+
+.gate-logo {
+  width: 142px;
+  margin: -25px -16px;
+}
+
+.foundation-brand-develop .foundation-icon {
+  width: 330px;
+  max-height: none;
+}
+
+.research-mission-icon {
+  width: 430px;
+  max-width: 100%;
+}
+
+.month-pack-final-icon {
+  right: 4px;
+  bottom: 2px;
+  width: 58%;
+  padding: 4px;
+  border-radius: 28px 70px 70px 28px;
+  background: #ffffff;
+  overflow: visible;
+}
+
+.additional-needs-copy .additional-needs-detail {
+  padding-top: 26px;
+  border-top: 1px solid rgba(31, 77, 77, 0.14);
+  font-size: 13px;
+}
+
+@media (max-width: 1120px) {
+  .hero-brand-media {
+    width: min(112%, 650px);
+  }
+
+  .hero-brand-labels {
+    margin-top: -132px;
+  }
+}
+
+@media (max-width: 940px) {
+  .hero-brand-media {
+    width: min(100%, 680px);
+  }
+}
+
+@media (max-width: 700px) {
+  .brand-icon {
+    width: 102px;
+    margin: -17px -9px;
+  }
+
+  .brand-lockup-footer .brand-icon {
+    width: 116px;
+    margin: -20px -10px;
+  }
+
+  .hero-brand-media {
+    width: 100%;
+  }
+
+  .hero-brand-labels {
+    margin-top: -92px;
+  }
+
+  .gate-logo {
+    width: 118px;
+    margin: -20px -13px;
+  }
+
+  .foundation-brand-develop .foundation-icon {
+    width: min(100%, 320px);
+    max-height: none;
+  }
+
+  .research-mission-icon {
+    width: min(100%, 350px);
   }
 }

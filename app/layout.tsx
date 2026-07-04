@@ -4,7 +4,7 @@ import "./globals.css";
 
 const title = "DevelopMonth — Child development and parenting, month by month.";
 const description =
-  "Calm, evidence-informed child development and parenting support, packaged month by month for families after birth.";
+  "Calm, parent-friendly child development check-ins, support guidance, and referral signposting, month by month after birth.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://developmonth.com"),

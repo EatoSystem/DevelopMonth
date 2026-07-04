@@ -11,8 +11,9 @@ type GrowthMapIconProps = {
 /**
  * The approved DevelopMonth icon supplied in the project folder.
  *
- * The source presentation artwork includes generous white space, so the image
- * is framed consistently without changing or reconstructing the mark.
+ * Always render the complete artwork with contain sizing. The source is a
+ * square PNG with generous white space; do not enlarge it inside a cropped
+ * wrapper because that removes the upper GrowthMap blocks.
  */
 export function GrowthMapIcon({
   className = "",
@@ -38,6 +39,7 @@ export function GrowthMapIcon({
         alt=""
         priority={priority}
         sizes={typeof size === "number" ? `${size}px` : undefined}
+        style={{ width: "100%", height: "auto" }}
       />
     </span>
   );

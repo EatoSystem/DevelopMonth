@@ -5,10 +5,10 @@ import {
   FoundingMembership,
   Header,
   Hero,
-  InsideMonth,
   MonthJourney,
   PregMonthBridge,
   ResearchFund,
+  SupportFlags,
   SupportPack,
   SupportBlocks,
   TrustSection,
@@ -23,9 +23,9 @@ export default function Home() {
         <Hero />
         <CorePromise />
         <SupportPack />
+        <SupportFlags />
         <SupportBlocks />
         <MonthJourney />
-        <InsideMonth />
         <AdditionalNeeds />
         <TrustSection />
         <PregMonthBridge />
