@@ -425,6 +425,10 @@ export function PersonalisedSupport() {
         <div className="companion-panel">
           <div className="companion-intro">
             <p className="eyebrow">DEVELOPMONTH COMPANION</p>
+            <p className="companion-control-note">
+              Parent-controlled <span aria-hidden="true">·</span> You choose
+              what to add
+            </p>
             <h3>
               A calm companion that helps organise your child&apos;s
               development journey month by month.
@@ -739,12 +743,12 @@ export function WaitlistSection() {
     <section className="section waitlist-section" id="waitlist">
       <div className="container waitlist-shell">
         <div className="waitlist-copy">
-          <p className="eyebrow">JOIN THE MISSION</p>
+          <p className="eyebrow">JOIN THE FOUNDING GROUP</p>
           <h2>Join the DevelopMonth waitlist.</h2>
           <p>
-            Be first to hear about Year One development check-ins, monthly
-            support packs, early access, research updates, and founding
-            membership.
+            Help shape a meaningful family-development platform and be first
+            to hear about Year One support packs, early access, research
+            updates, and founding membership.
           </p>
           <div className="waitlist-points">
             <p><span aria-hidden="true">✓</span> Monthly development check-ins</p>

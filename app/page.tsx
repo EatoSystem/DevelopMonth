@@ -24,11 +24,11 @@ export default function Home() {
         <Hero />
         <CorePromise />
         <SupportPack />
-        <SupportFlags />
         <SupportBlocks />
         <PersonalisedSupport />
         <MonthJourney />
         <AdditionalNeeds />
+        <SupportFlags />
         <TrustSection />
         <PregMonthBridge />
         <ResearchFund />
