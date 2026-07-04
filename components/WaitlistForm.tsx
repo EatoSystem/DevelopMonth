@@ -3,11 +3,13 @@
 import { FormEvent, useState } from "react";
 
 const roles = [
-  "Pregnant / planning pregnancy",
-  "Partner",
   "Parent",
+  "Expecting parent",
+  "Partner",
   "Family member",
   "Healthcare professional",
+  "Educator",
+  "Therapist",
   "Researcher / organisation",
   "Other",
 ];
@@ -18,8 +20,8 @@ export function WaitlistForm() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    // TODO: Replace this local confirmation with a secure waitlist API
-    // (for example Supabase + server-side validation). No data is persisted yet.
+    // TODO: Connect this form to a secure waitlist endpoint with server-side
+    // validation. This preview confirmation does not persist submitted data.
     setSubmitted(true);
   }
 
@@ -83,14 +85,14 @@ export function WaitlistForm() {
 
       <div className="field">
         <label htmlFor="interest">
-          Pregnancy month, due month, or interest area{" "}
+          Child age / due month / interest area{" "}
           <span className="optional">Optional</span>
         </label>
         <input
           id="interest"
           name="interest"
           type="text"
-          placeholder="For example: Month 4 or nutrition"
+          placeholder="For example: Month 4, feeding, or research"
         />
       </div>
 

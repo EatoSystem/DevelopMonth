@@ -72,9 +72,9 @@ export function Header() {
         </a>
         <nav aria-label="Primary navigation">
           <a href="#vision">Vision</a>
-          <a href="#support-blocks">Support blocks</a>
-          <a href="#months">Month journey</a>
-          <a href="#research">Research Fund</a>
+          <a href="#year-one">Year One</a>
+          <a href="#support-blocks">Support packs</a>
+          <a href="#foundation">PregMonth</a>
           <a className="header-cta" href="#waitlist">
             Join waitlist <span aria-hidden="true">↗</span>
           </a>
@@ -105,29 +105,30 @@ export function Hero() {
             </div>
           </div>
           <div className="hero-brand-labels" aria-label="Support themes">
-            <span>Calm</span>
-            <span>Nutrition</span>
-            <span>Questions</span>
+            <span>Development</span>
+            <span>Feeding</span>
+            <span>Support</span>
           </div>
         </div>
         <div className="hero-copy">
           <p className="eyebrow eyebrow-rule">DEVELOPMONTH</p>
           <h1>
-            Pregnancy,
+            Support your child&apos;s development,
             <br />
             month by month.
           </h1>
           <p className="hero-intro">
-            Every month brings new questions. DevelopMonth gives you a calm
-            support pack for the stage you are in — with guidance for what to
-            understand, what to eat, what to prepare, and what to ask.
+            Every month after birth brings new changes, questions, and
+            decisions. DevelopMonth gives families a calm support pack for the
+            stage they are in — with guidance for development, feeding, sleep,
+            bonding, parenting, and what to ask.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#waitlist">
               Join the Waitlist <span aria-hidden="true">↗</span>
             </a>
-            <a className="button button-text" href="#support-blocks">
-              Explore Support Packs <span aria-hidden="true">↓</span>
+            <a className="button button-text" href="#year-one">
+              Explore Year One <span aria-hidden="true">↓</span>
             </a>
           </div>
           <p className="hero-audience">
@@ -136,8 +137,8 @@ export function Hero() {
               <i />
               <i />
             </span>
-            Early access for parents, partners, families, healthcare
-            professionals, and researchers.
+            Early access for parents, families, healthcare professionals,
+            educators, therapists, and researchers.
           </p>
         </div>
 
@@ -145,8 +146,8 @@ export function Hero() {
       <div className="container hero-promise">
         <span>01</span>
         <p>
-          You do not need all the information at once.
-          <strong> You need the right support for this month.</strong>
+          You do not need to track everything.
+          <strong> You need to know what matters this month.</strong>
         </p>
       </div>
     </section>
@@ -154,25 +155,45 @@ export function Hero() {
 }
 
 const monthPackContents = [
-  "Calm",
-  "Knowledge",
-  "Nutrition",
-  "Preparation",
-  "Questions",
-  "Family",
+  "Development",
+  "Feeding",
+  "Sleep",
+  "Bonding",
+  "Parenting",
+  "Health questions",
 ];
 
 export function CorePromise() {
   return (
-    <section className="section core-promise" id="vision">
+    <section className="section vision-section" id="vision">
+      <div className="container vision-shell">
+        <p className="eyebrow">CALM SUPPORT, NOT COMPARISON</p>
+        <h2>
+          You do not need to track everything.
+          <br />
+          You need to know what matters this month.
+        </h2>
+        <p>
+          DevelopMonth helps families focus on the stage they are in — with
+          calm guidance, practical support, and clear questions to ask when
+          professional advice may help.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export function SupportPack() {
+  return (
+    <section className="section core-promise" id="support-pack">
       <div className="container promise-layout">
         <div className="promise-copy">
-          <p className="eyebrow">THE MONTHLY SUPPORT PACK</p>
-          <h2>A support pack for every month before birth.</h2>
+          <p className="eyebrow">DEVELOPMONTH YEAR ONE</p>
+          <h2>A support pack for every month after birth.</h2>
           <p>
-            DevelopMonth turns pregnancy into calm monthly support packs, so
-            families can focus on what matters now instead of trying to absorb
-            everything at once.
+            DevelopMonth turns the first year into calm monthly support packs,
+            so families can focus on what matters now instead of trying to
+            absorb everything at once.
           </p>
         </div>
         <article className="month-support-pack">
@@ -180,7 +201,7 @@ export function CorePromise() {
             <span>MONTH 01</span>
             <small>DEVELOPMONTH</small>
           </div>
-          <h3>Foundations</h3>
+          <h3>Bonding and recovery</h3>
           <p>This month&apos;s support</p>
           <div className="month-support-pack-list">
             {monthPackContents.map((label, index) => (
@@ -202,39 +223,39 @@ export function CorePromise() {
 const supportBlocks = [
   {
     number: "01",
-    title: "Calm",
-    text: "Reassurance without overwhelm.",
-    tone: "pink",
-  },
-  {
-    number: "02",
-    title: "Knowledge",
-    text: "Understand what is changing this month.",
-    tone: "aqua-light",
-  },
-  {
-    number: "03",
-    title: "Nutrition",
-    text: "Food-first support for energy, digestion, key nutrients, hydration, cravings, nausea, and food safety.",
+    title: "Development",
+    text: "Understand what may be emerging this month.",
     tone: "aqua",
   },
   {
+    number: "02",
+    title: "Feeding",
+    text: "Support feeding, weaning, variety, hydration, and family food confidence.",
+    tone: "sage",
+  },
+  {
+    number: "03",
+    title: "Sleep",
+    text: "Understand changing sleep rhythms without pressure.",
+    tone: "aqua-light",
+  },
+  {
     number: "04",
-    title: "Preparation",
-    text: "Appointments, questions, scans, birth planning, and next-stage prompts.",
+    title: "Bonding",
+    text: "Support connection, attachment, and emotional security.",
     tone: "lime",
   },
   {
     number: "05",
-    title: "Questions",
-    text: "Know what to ask your healthcare team.",
-    tone: "pink-light",
+    title: "Parenting",
+    text: "Feel calmer and more confident in daily routines.",
+    tone: "teal",
   },
   {
     number: "06",
-    title: "Family",
-    text: "Support for partners, family members, and the wider care circle.",
-    tone: "sage",
+    title: "Health questions",
+    text: "Know what to ask your GP, public health nurse, paediatrician, therapist, or care team.",
+    tone: "lime",
   },
 ];
 
@@ -245,7 +266,7 @@ export function SupportBlocks() {
         <SectionHeader
           eyebrow="INSIDE EACH SUPPORT PACK"
           title="What comes inside each support pack?"
-          body="Each month brings together the support families need for that stage."
+          body="Each month brings together the support families need for that stage — not everything, not all at once, just what matters now."
         />
         <div className="support-block-grid">
           {supportBlocks.map((block) => (
@@ -263,8 +284,8 @@ export function SupportBlocks() {
           ))}
         </div>
         <p className="support-growth-note">
-          Expert-informed guidance, community support, and research updates
-          will grow into the platform over time.
+          Movement, language, play, family support, additional-needs
+          signposting, and research updates grow into the platform over time.
         </p>
       </div>
     </section>
@@ -272,30 +293,35 @@ export function SupportBlocks() {
 }
 
 const months = [
-  ["01", "Foundations"],
-  ["02", "Early changes"],
-  ["03", "First trimester support"],
-  ["04", "Energy and growth"],
-  ["05", "Movement and connection"],
-  ["06", "Preparation begins"],
-  ["07", "Third trimester support"],
-  ["08", "Getting ready"],
-  ["09", "Birth and beyond"],
+  ["01", "Bonding and recovery"],
+  ["02", "Feeding and rhythm"],
+  ["03", "Sleep patterns"],
+  ["04", "Tummy time and connection"],
+  ["05", "Curiosity and interaction"],
+  ["06", "Starting solids"],
+  ["07", "Movement"],
+  ["08", "Exploration"],
+  ["09", "Communication"],
+  ["10", "Confidence"],
+  ["11", "First steps forward"],
+  ["12", "First year foundations"],
 ];
 
 export function MonthJourney() {
   return (
-    <section className="section month-journey-section" id="months">
+    <section className="section month-journey-section" id="year-one">
       <div className="container">
         <SectionHeader
-          eyebrow="THE MONTHMAP JOURNEY"
-          title="Nine months. One supported journey."
-          body="Each month has its own support pack, building toward birth and the transition into DevelopMonth."
+          eyebrow="DEVELOPMONTH YEAR ONE"
+          title="Year One. One supported journey."
+          body="DevelopMonth organises the first year after birth into monthly support packs, so each stage feels clearer, calmer, and more manageable."
         />
-        <div className="monthmap" aria-label="Nine month DevelopMonth journey">
+        <div className="monthmap" aria-label="DevelopMonth Year One journey">
           {months.map(([number, title], index) => (
             <article
-              className={`month-pack month-pack-${index + 1}`}
+              className={`month-pack month-pack-${index + 1} ${
+                index === months.length - 1 ? "month-pack-final" : ""
+              }`}
               key={number}
             >
               <span className="month-pack-number">{number}</span>
@@ -306,7 +332,7 @@ export function MonthJourney() {
               {index === months.length - 1 ? (
                 <GrowthMapIcon
                   className="month-pack-final-icon"
-                  ariaLabel="Month 9 DevelopMonth GrowthMap"
+                  ariaLabel="Month 12 DevelopMonth GrowthMap"
                 />
               ) : null}
             </article>
@@ -315,9 +341,85 @@ export function MonthJourney() {
         <div className="medical-note">
           <span aria-hidden="true">+</span>
           <p>
-            DevelopMonth is designed to complement, not replace, doctors,
-            midwives, maternity teams, dietitians, or other healthcare
-            professionals.
+            Every child develops differently. Month-by-month support offers
+            context and questions to ask — not a checklist or comparison.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const monthPrompts = [
+  "What may be changing?",
+  "How can I support development?",
+  "What should feeding look like?",
+  "How is sleep changing?",
+  "What should I ask?",
+  "When should I seek guidance?",
+  "How can family help?",
+];
+
+export function InsideMonth() {
+  return (
+    <section className="section inside-month-section">
+      <div className="container">
+        <SectionHeader
+          eyebrow="STAGE-SPECIFIC SUPPORT"
+          title="What comes inside each month?"
+          body="Each month brings together support for what families need now — practical, calm, and stage-specific."
+        />
+        <div className="inside-month-cluster">
+          <article className="inside-month-centre">
+            <span>DEVELOPMONTH</span>
+            <strong>This month</strong>
+            <p>Calm support for the stage you are in.</p>
+          </article>
+          {monthPrompts.map((prompt, index) => (
+            <article
+              className={`inside-block inside-block-${index + 1}`}
+              key={prompt}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{prompt}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function AdditionalNeeds() {
+  return (
+    <section className="section additional-needs-section">
+      <div className="container additional-needs-shell">
+        <div className="additional-needs-copy">
+          <p className="eyebrow">EVERY CHILD DEVELOPS DIFFERENTLY</p>
+          <h2>
+            Support without pressure.
+            <br />
+            Signposting without panic.
+          </h2>
+          <p>
+            Every child develops differently. DevelopMonth is designed to help
+            families notice patterns calmly, ask better questions, and seek
+            professional support when needed — without fear, comparison, or
+            judgement.
+          </p>
+        </div>
+        <div className="additional-needs-principles" aria-label="Our approach">
+          <p>
+            <span>01</span>
+            <strong>Notice calmly</strong>
+          </p>
+          <p>
+            <span>02</span>
+            <strong>Ask better questions</strong>
+          </p>
+          <p>
+            <span>03</span>
+            <strong>Seek guidance when needed</strong>
           </p>
         </div>
       </div>
@@ -333,7 +435,7 @@ export function TrustSection() {
           <SectionHeader
             eyebrow="THE OUTCOME ECONOMY"
             title="Built for better outcomes, not more attention."
-            body="A calmer way to understand this month, prepare for the next, and know when professional support matters."
+            body="Parenting information can feel fragmented, overwhelming, and comparison-driven. DevelopMonth is being built around clarity, calm support, responsible signposting, and family confidence."
           />
           <div className="trust-statements">
             <p>
@@ -341,12 +443,12 @@ export function TrustSection() {
               <strong>More clarity.</strong>
             </p>
             <p>
-              <span>Not more fear.</span>
-              <strong>More preparation.</strong>
+              <span>Not more pressure.</span>
+              <strong>More support.</strong>
             </p>
             <p>
-              <span>Not more noise.</span>
-              <strong>More support.</strong>
+              <span>Not more comparison.</span>
+              <strong>More confidence.</strong>
             </p>
           </div>
         </div>
@@ -361,15 +463,16 @@ export function PregMonthBridge() {
       <div className="container foundation-shell">
         <div className="foundation-copy">
           <p className="eyebrow">PREGMONTH → DEVELOPMONTH</p>
-          <h2>A child’s development starts before birth.</h2>
+          <h2>
+            Development starts before birth.
+            <br />
+            Support continues after birth.
+          </h2>
           <p>
             PregMonth helps families build the foundation before birth.
             DevelopMonth continues the journey after birth with child
             development and parenting support, month by month.
           </p>
-          <strong>
-            Build the foundation before birth. Support development after birth.
-          </strong>
         </div>
         <div className="foundation-visual" aria-label="PregMonth to DevelopMonth">
           <div className="foundation-brand foundation-brand-preg">
@@ -405,17 +508,18 @@ export function ResearchFund() {
     <section className="section research-mission-section" id="research">
       <div className="container research-mission-layout">
         <div className="research-mission-copy">
-          <p className="eyebrow">THE MONTH RESEARCH FUND</p>
-          <h2>
-            Supporting families today.
-            <br />
-            Funding better answers for tomorrow.
-          </h2>
-          <p>
-            DevelopMonth is being built with a long-term commitment to support
-            pregnancy research, maternal health, child development, and
-            children with additional needs as the platform grows.
+          <p className="eyebrow">RESEARCH AND IMPACT</p>
+          <h2>Research for every stage of early development.</h2>
+          <p className="research-mission-body">
+            As DevelopMonth grows, a share of future profits will support child
+            development research, family health, and support for children with
+            additional needs.
           </p>
+          <div className="research-pillars" aria-label="Research priorities">
+            <p><span>01</span> Child development</p>
+            <p><span>02</span> Parenting and family support</p>
+            <p><span>03</span> Additional needs</p>
+          </div>
         </div>
         <div className="research-mission-object">
           <GrowthMapIcon
@@ -425,7 +529,7 @@ export function ResearchFund() {
           <div>
             <span>OUR LONG-TERM AMBITION</span>
             <strong>
-              Nine stages.
+              Three priorities.
               <br />
               One research mission.
             </strong>
@@ -437,9 +541,9 @@ export function ResearchFund() {
 }
 
 const membershipBenefits = [
-  ["01", "Early product access"],
-  ["02", "Shape the monthly support packs"],
-  ["03", "Research updates and DevelopMonth priority"],
+  ["01", "Early access to Year One support packs"],
+  ["02", "Shape parenting tools and signposting"],
+  ["03", "Research updates and platform previews"],
 ];
 
 const membershipLevels = [
@@ -457,13 +561,15 @@ export function FoundingMembership() {
           <h2>Become a founding family.</h2>
           <p>
             Founding families help shape DevelopMonth from the beginning —
-            supporting the development of monthly support packs, research
-            updates, and the bridge into DevelopMonth.
+            supporting Year One development packs, parenting tools,
+            additional-needs signposting, research updates, and the wider
+            PregMonth → DevelopMonth journey.
           </p>
           <small>
             Final membership benefits and pricing may evolve before launch.
             Membership supports early access, guidance tools, product updates,
-            and mission participation—not clinical care.
+            and mission participation—not medical care or developmental
+            assessment services.
           </small>
         </div>
         <div className="membership-card">
@@ -509,11 +615,12 @@ export function WaitlistSection() {
           <p className="eyebrow">JOIN THE MISSION</p>
           <h2>Join the DevelopMonth waitlist.</h2>
           <p>
-            Be first to hear about early access, monthly support packs,
-            founding membership, research updates, and DevelopMonth.
+            Be first to hear about Year One support packs, early access,
+            research updates, founding membership, and the future DevelopMonth
+            family platform.
           </p>
           <div className="waitlist-points">
-            <p><span aria-hidden="true">✓</span> Monthly support packs</p>
+            <p><span aria-hidden="true">✓</span> Year One support packs</p>
             <p><span aria-hidden="true">✓</span> Evidence-informed guidance</p>
             <p><span aria-hidden="true">✓</span> Research Fund updates</p>
             <p><span aria-hidden="true">✓</span> DevelopMonth early access</p>
@@ -535,8 +642,8 @@ export function Footer() {
           </a>
           <nav aria-label="Footer navigation">
             <a href="#vision">Vision</a>
+            <a href="#year-one">Year One</a>
             <a href="#support-blocks">Support blocks</a>
-            <a href="#months">Month journey</a>
             <a href="#research">Research Fund</a>
             <a href="#waitlist">Waitlist</a>
             <a href="#foundation">Foundation</a>

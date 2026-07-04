@@ -1,12 +1,15 @@
 import {
+  AdditionalNeeds,
   CorePromise,
   Footer,
   FoundingMembership,
   Header,
   Hero,
+  InsideMonth,
   MonthJourney,
   PregMonthBridge,
   ResearchFund,
+  SupportPack,
   SupportBlocks,
   TrustSection,
   WaitlistSection,
@@ -19,8 +22,11 @@ export default function Home() {
       <main>
         <Hero />
         <CorePromise />
+        <SupportPack />
         <SupportBlocks />
         <MonthJourney />
+        <InsideMonth />
+        <AdditionalNeeds />
         <TrustSection />
         <PregMonthBridge />
         <ResearchFund />
