@@ -118,11 +118,11 @@ export function Hero() {
             month by month.
           </h1>
           <p className="hero-intro">
-            Every month after birth brings new changes, questions, and
-            decisions. DevelopMonth gives families calm developmental check-ins
-            and support packs for the stage they are in — helping parents
-            understand what may be emerging, how to support development, and
-            when to seek guidance.
+            Every month after birth brings new ways your child may grow,
+            connect, move, communicate, feed, sleep, play, and learn.
+            DevelopMonth gives families calm monthly support packs — and, over
+            time, personalises guidance around the journal, check-ins, and
+            calendar you choose to add.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#waitlist">
@@ -189,8 +189,8 @@ export function CorePromise() {
         </h2>
         <p>
           DevelopMonth helps families notice what may be emerging each month,
-          support development through everyday routines and play, and know when
-          a concern may be worth discussing with a professional.
+          support development through everyday routines and play, and prepare
+          thoughtful questions when professional guidance may help.
         </p>
       </div>
     </section>
@@ -202,11 +202,12 @@ export function SupportPack() {
     <section className="section core-promise" id="support-pack">
       <div className="container promise-layout">
         <div className="promise-copy">
-          <p className="eyebrow">YEAR ONE ASSESSMENT SYSTEM</p>
+          <p className="eyebrow">DEVELOPMONTH YEAR ONE</p>
           <h2>A development check-in for every month.</h2>
           <p>
-            Each DevelopMonth check-in is designed to help parents reflect on
-            key areas of development without pressure or comparison.
+            Monthly support packs include positive development guidance,
+            parent-friendly check-ins, practical activities, family support,
+            and gentle signposting when extra help may be useful.
           </p>
           <div className="assessment-domain-list" aria-label="Development areas">
             {assessmentDomains.map((domain) => (
@@ -339,7 +340,7 @@ export function SupportBlocks() {
         <SectionHeader
           eyebrow="INSIDE EACH SUPPORT PACK"
           title="What comes inside each monthly support pack?"
-          body="Each month brings together a calm check-in, development guidance, practical support ideas, and questions to ask when professional advice may help."
+          body="Monthly support packs include positive development guidance, parent-friendly check-ins, practical activities, family support, and gentle signposting when extra help may be useful."
         />
         <div className="support-block-grid">
           {supportBlocks.map((block) => (
@@ -359,6 +360,92 @@ export function SupportBlocks() {
         <p className="support-growth-note">
           Educational support only. DevelopMonth does not diagnose, treat, or
           replace professional developmental assessment.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+const personalisedSupportFeatures = [
+  {
+    number: "01",
+    title: "Journal",
+    text: "Capture the small wins, questions, routines, and changes that matter.",
+    tone: "aqua",
+  },
+  {
+    number: "02",
+    title: "Calendar",
+    text: "Keep health checks, appointments, reminders, and monthly check-ins in one place.",
+    tone: "sage",
+  },
+  {
+    number: "03",
+    title: "Check-ins",
+    text: "Reflect on development, feeding, sleep, bonding, movement, communication, and family support.",
+    tone: "lime",
+  },
+  {
+    number: "04",
+    title: "Personalised support",
+    text: "Receive guidance shaped around your child’s month, your notes, and your family’s needs.",
+    tone: "teal",
+  },
+];
+
+/**
+ * Static product-direction concept only.
+ *
+ * Future domain boundaries may include ChildProfile, Journal, Calendar,
+ * MonthlyCheckIn, SupportPack, DevelopmentSummary, QuestionsForProfessional,
+ * and DevelopMonthCompanion. No account, persistence, or personalisation
+ * infrastructure is implemented in this homepage preview.
+ */
+export function PersonalisedSupport() {
+  return (
+    <section className="section personalised-support-section">
+      <div className="container">
+        <SectionHeader
+          eyebrow="PERSONALISED SUPPORT"
+          title="Personalised around your child."
+          body="As your family uses DevelopMonth, your child’s journal, monthly check-ins, calendar, and saved support packs help personalise the guidance you see. DevelopMonth can help you notice progress, prepare better questions, choose practical activities, and understand when extra support may be useful — always as educational support, not medical diagnosis."
+        />
+        <div className="personalised-support-grid">
+          {personalisedSupportFeatures.map((feature) => (
+            <article
+              className={`personalised-support-card personalised-support-card-${feature.tone}`}
+              key={feature.title}
+            >
+              <span>{feature.number}</span>
+              <h3>{feature.title}</h3>
+              <p>{feature.text}</p>
+            </article>
+          ))}
+        </div>
+        <div className="companion-panel">
+          <div className="companion-intro">
+            <p className="eyebrow">DEVELOPMONTH COMPANION</p>
+            <h3>
+              A calm companion that helps organise your child&apos;s
+              development journey month by month.
+            </h3>
+            <p>
+              DevelopMonth learns from the information you choose to add — your
+              journal, check-ins, calendar, and support goals — to personalise
+              monthly guidance for your child and family.
+            </p>
+          </div>
+          <div className="companion-capabilities">
+            <p>Summarise journal notes and positive development patterns.</p>
+            <p>Personalise support packs and everyday activities.</p>
+            <p>Prepare questions and monthly development summaries.</p>
+            <p>Gently signpost when extra support may be useful.</p>
+          </div>
+        </div>
+        <p className="personalised-support-note">
+          Parents choose what they add. DevelopMonth uses that information to
+          personalise educational support and should never replace professional
+          medical or developmental assessment.
         </p>
       </div>
     </section>

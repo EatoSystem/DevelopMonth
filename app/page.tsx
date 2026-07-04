@@ -6,6 +6,7 @@ import {
   Header,
   Hero,
   MonthJourney,
+  PersonalisedSupport,
   PregMonthBridge,
   ResearchFund,
   SupportFlags,
@@ -25,6 +26,7 @@ export default function Home() {
         <SupportPack />
         <SupportFlags />
         <SupportBlocks />
+        <PersonalisedSupport />
         <MonthJourney />
         <AdditionalNeeds />
         <TrustSection />

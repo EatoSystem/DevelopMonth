@@ -5692,3 +5692,202 @@ a {
     width: min(100%, 350px);
   }
 }
+
+/* Personalised support concept */
+
+.personalised-support-section {
+  background: var(--dm-aqua-light);
+}
+
+.personalised-support-grid {
+  display: grid;
+  margin-top: 72px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.personalised-support-card {
+  --personalised-accent: var(--dm-aqua);
+  position: relative;
+  display: flex;
+  min-height: 310px;
+  flex-direction: column;
+  padding: 34px 30px;
+  overflow: hidden;
+  border: 1px solid rgba(31, 77, 77, 0.08);
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      180deg,
+      var(--personalised-accent) 0,
+      var(--personalised-accent) 10px,
+      #ffffff 10px,
+      #ffffff 100%
+    );
+  box-shadow: 0 18px 48px rgba(31, 77, 77, 0.08);
+}
+
+.personalised-support-card-sage {
+  --personalised-accent: var(--dm-sage);
+}
+
+.personalised-support-card-lime {
+  --personalised-accent: var(--dm-lime);
+}
+
+.personalised-support-card-teal {
+  --personalised-accent: var(--dm-teal);
+}
+
+.personalised-support-card > span {
+  color: rgba(31, 77, 77, 0.44);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.personalised-support-card h3 {
+  margin: auto 0 0;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.personalised-support-card p {
+  margin: 18px 0 0;
+  color: var(--pm-ink-soft);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.companion-panel {
+  display: grid;
+  align-items: center;
+  margin-top: 28px;
+  padding: 68px;
+  border-radius: 38px;
+  background: var(--dm-teal-dark);
+  color: #ffffff;
+  grid-template-columns: minmax(0, 1.05fr) minmax(390px, 0.75fr);
+  gap: 86px;
+  box-shadow: 0 24px 70px rgba(31, 77, 77, 0.14);
+}
+
+.companion-intro .eyebrow {
+  color: var(--dm-aqua);
+}
+
+.companion-intro h3 {
+  max-width: 720px;
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 4.5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.companion-intro > p:last-child {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.companion-capabilities {
+  display: grid;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.companion-capabilities p {
+  position: relative;
+  margin: 0;
+  padding: 18px 0 18px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.companion-capabilities p::before {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--dm-lime);
+  content: "";
+}
+
+.companion-capabilities p:nth-child(2)::before {
+  background: var(--dm-aqua);
+}
+
+.companion-capabilities p:nth-child(3)::before {
+  background: var(--dm-sage);
+}
+
+.companion-capabilities p:nth-child(4)::before {
+  background: var(--dm-teal);
+}
+
+.personalised-support-note {
+  max-width: 980px;
+  margin: 36px auto 0;
+  padding: 20px 26px;
+  border: 1px solid rgba(31, 77, 77, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--pm-ink-soft);
+  font-size: 11px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+  .personalised-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .companion-panel {
+    gap: 56px;
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.72fr);
+  }
+}
+
+@media (max-width: 940px) {
+  .companion-panel {
+    padding: 58px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .personalised-support-grid {
+    margin-top: 48px;
+    grid-template-columns: 1fr;
+  }
+
+  .personalised-support-card {
+    min-height: 250px;
+  }
+
+  .companion-panel {
+    padding: 48px 24px;
+    border-radius: 30px;
+  }
+
+  .companion-intro h3 {
+    font-size: 44px;
+  }
+
+  .personalised-support-note {
+    border-radius: 24px;
+    text-align: left;
+  }
+}
