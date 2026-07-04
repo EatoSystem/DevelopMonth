@@ -6013,7 +6013,8 @@ a {
 }
 
 .hero-brand-media {
-  width: min(100%, 620px);
+  width: min(112%, 660px);
+  margin-left: -6%;
   aspect-ratio: 1;
   padding: 12px;
   border: 1px solid rgba(31, 77, 77, 0.09);
@@ -6034,15 +6035,60 @@ a {
 }
 
 .hero-brand-labels {
+  display: grid;
   width: min(86%, 470px);
-  margin: -108px auto 0;
-  padding-top: 18px;
-  border-top: 1px solid rgba(31, 77, 77, 0.12);
-  gap: 34px;
+  margin: -104px auto 0;
+  padding: 10px;
+  border: 1px solid rgba(31, 77, 77, 0.11);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 46px rgba(31, 77, 77, 0.09);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+.hero-brand-labels span {
+  min-height: 48px;
+  justify-content: flex-start;
+  padding: 10px 12px;
+  border-right: 1px solid rgba(31, 77, 77, 0.1);
+  border-bottom: 1px solid rgba(31, 77, 77, 0.1);
+  font-size: 8px;
+  letter-spacing: 0.11em;
+}
+
+.hero-brand-labels span:nth-child(3n) {
+  border-right: 0;
+}
+
+.hero-brand-labels span:nth-child(n + 4) {
+  border-bottom: 0;
+}
+
+.hero-brand-labels span:nth-child(4)::before {
+  background: var(--dm-sage);
+}
+
+.hero-brand-labels span:nth-child(5)::before {
+  background: var(--dm-lime);
+}
+
+.hero-brand-labels span:nth-child(6)::before {
+  background: var(--dm-teal);
 }
 
 .hero-copy {
+  display: block;
   max-width: 700px;
+}
+
+.hero-copy .eyebrow,
+.hero h1,
+.hero-intro,
+.hero-actions,
+.hero-microcopy {
+  grid-column: auto;
+  grid-row: auto;
 }
 
 .hero h1 {
@@ -6056,6 +6102,18 @@ a {
   margin-top: 34px;
   font-size: 17px;
   line-height: 1.75;
+}
+
+.hero-microcopy {
+  max-width: 620px;
+  margin: 26px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--pm-line);
+  color: rgba(31, 77, 77, 0.64);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
 }
 
 .hero-promise {
@@ -6083,7 +6141,7 @@ a {
 /* Monthly support packs */
 
 .core-promise {
-  background: var(--dm-aqua-light);
+  background: #ffffff;
 }
 
 .promise-layout {
@@ -6118,6 +6176,14 @@ a {
 .month-support-pack::before,
 .month-support-pack::after {
   border-radius: 40px;
+}
+
+.development-check-in-card {
+  min-height: 680px;
+}
+
+.development-check-in-card .month-support-pack-list span {
+  min-height: 56px;
 }
 
 .check-in-next-steps {
@@ -6168,6 +6234,10 @@ a {
   margin-inline: auto;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+}
+
+.support-blocks-section {
+  background: var(--dm-lime);
 }
 
 .support-block {
@@ -6231,6 +6301,13 @@ a {
   background: #ffffff;
   color: var(--dm-teal-dark);
   box-shadow: 0 18px 54px rgba(31, 77, 77, 0.075);
+}
+
+.companion-growth-map-icon {
+  width: 190px;
+  margin: -34px 0 -14px -20px;
+  padding: 10px;
+  overflow: visible;
 }
 
 .companion-intro .eyebrow {
@@ -6346,6 +6423,16 @@ a {
   font-size: clamp(50px, 5vw, 70px);
 }
 
+.additional-needs-copy h3 {
+  max-width: 700px;
+  margin: 24px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
 .additional-needs-principles {
   gap: 0;
   border-top: 1px solid rgba(31, 77, 77, 0.16);
@@ -6444,10 +6531,11 @@ a {
 
   .hero-brand-media {
     width: min(100%, 560px);
+    margin-inline: auto;
   }
 
   .hero-brand-labels {
-    margin-top: -96px;
+    margin-top: -92px;
   }
 
   .promise-layout {
@@ -6538,6 +6626,7 @@ a {
 
   .hero-brand-media {
     width: 100%;
+    margin-inline: auto;
     padding: 8px;
     border-radius: 32px;
   }
@@ -6548,14 +6637,16 @@ a {
 
   .hero-brand-labels {
     width: 88%;
-    margin-top: -64px;
-    padding-top: 12px;
-    gap: 16px;
+    margin-top: -58px;
+    padding: 7px;
   }
 
   .hero-brand-labels span {
-    gap: 6px;
-    font-size: 7px;
+    min-height: 42px;
+    gap: 5px;
+    padding: 8px 7px;
+    font-size: 6.5px;
+    letter-spacing: 0.08em;
   }
 
   .hero h1 {
@@ -6624,6 +6715,12 @@ a {
     border-radius: 30px;
   }
 
+  .companion-growth-map-icon {
+    width: 150px;
+    margin: -22px 0 -10px -14px;
+    padding: 8px;
+  }
+
   .companion-control-note {
     margin-bottom: 22px;
     white-space: normal;
@@ -6663,6 +6760,10 @@ a {
 
   .additional-needs-copy h2 {
     font-size: 46px;
+  }
+
+  .additional-needs-copy h3 {
+    font-size: 30px;
   }
 
   .support-flags-section {

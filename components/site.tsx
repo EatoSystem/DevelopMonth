@@ -104,10 +104,16 @@ export function Hero() {
               />
             </div>
           </div>
-          <div className="hero-brand-labels" aria-label="Support themes">
-            <span>Check in</span>
-            <span>Support</span>
-            <span>Signpost</span>
+          <div
+            className="hero-brand-labels"
+            aria-label="This month's DevelopMonth tools"
+          >
+            <span>This month</span>
+            <span>Journal</span>
+            <span>Calendar</span>
+            <span>Check-in</span>
+            <span>Activities</span>
+            <span>Questions</span>
           </div>
         </div>
         <div className="hero-copy">
@@ -120,9 +126,9 @@ export function Hero() {
           <p className="hero-intro">
             Every month after birth brings new ways your child may grow,
             connect, move, communicate, feed, sleep, play, and learn.
-            DevelopMonth gives families calm monthly support packs — and, over
-            time, personalises guidance around the journal, check-ins, and
-            calendar you choose to add.
+            DevelopMonth gives families positive monthly support packs
+            personalised around the journal, calendar, and check-ins they
+            choose to add.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#waitlist">
@@ -132,14 +138,9 @@ export function Hero() {
               Explore Year One <span aria-hidden="true">↓</span>
             </a>
           </div>
-          <p className="hero-audience">
-            <span aria-hidden="true">
-              <i />
-              <i />
-              <i />
-            </span>
-            Early access for parents, families, healthcare professionals,
-            educators, therapists, and researchers.
+          <p className="hero-microcopy">
+            Parent-controlled. Educational support only. Built to complement
+            professional guidance.
           </p>
         </div>
 
@@ -147,32 +148,32 @@ export function Hero() {
       <div className="container hero-promise">
         <span>01</span>
         <p>
-          You do not need to track everything.
-          <strong> You need to know what matters this month.</strong>
+          One month at a time.
+          <strong> Support growth through everyday moments.</strong>
         </p>
       </div>
     </section>
   );
 }
 
-const assessmentDomains = [
+const supportAreas = [
+  "Growth and development",
+  "Play and connection",
   "Movement",
-  "Feeding",
-  "Sleep",
-  "Bonding",
   "Communication",
-  "Play",
-  "Parenting",
-  "Health questions",
-  "Additional needs",
+  "Feeding",
+  "Sleep rhythms",
+  "Bonding",
+  "Parent confidence",
 ];
 
-const checkInQuestions = [
-  "What may be changing?",
-  "How is your child moving?",
-  "How are feeding and sleep changing?",
-  "How are they communicating?",
-  "What would you like to ask?",
+const monthlySupport = [
+  "Growing through play",
+  "Feeding and new textures",
+  "Movement and strength",
+  "Sleep and rhythm",
+  "Bonding and confidence",
+  "Questions to ask",
 ];
 
 export function CorePromise() {
@@ -181,16 +182,16 @@ export function CorePromise() {
       <div className="container vision-shell">
         <p className="eyebrow">THE DEVELOPMONTH APPROACH</p>
         <h2>
-          Monthly check-ins.
+          Support their growth.
           <br />
-          Calm support.
+          Understand this month.
           <br />
-          Clear next steps.
+          Feel more confident.
         </h2>
         <p>
-          DevelopMonth helps families notice what may be emerging each month,
-          support development through everyday routines and play, and prepare
-          thoughtful questions when professional guidance may help.
+          DevelopMonth helps families focus on the stage they are in — with
+          positive development guidance, practical activities, parent-friendly
+          check-ins, and gentle signposting when extra support may be useful.
         </p>
       </div>
     </section>
@@ -203,15 +204,16 @@ export function SupportPack() {
       <div className="container promise-layout">
         <div className="promise-copy">
           <p className="eyebrow">DEVELOPMONTH YEAR ONE</p>
-          <h2>A development check-in for every month.</h2>
+          <h2>A development support pack for every month.</h2>
           <p>
-            Monthly support packs include positive development guidance,
-            parent-friendly check-ins, practical activities, family support,
-            and gentle signposting when extra help may be useful.
+            Each month brings together positive development guidance, play and
+            bonding ideas, feeding and sleep support, parent-friendly
+            check-ins, and questions to ask when professional guidance may
+            help.
           </p>
           <div className="assessment-domain-list" aria-label="Development areas">
-            {assessmentDomains.map((domain) => (
-              <span key={domain}>{domain}</span>
+            {supportAreas.map((area) => (
+              <span key={area}>{area}</span>
             ))}
           </div>
         </div>
@@ -221,20 +223,14 @@ export function SupportPack() {
             <small>DEVELOPMONTH</small>
           </div>
           <h3>Starting solids and movement</h3>
-          <p>This month&apos;s check-in</p>
+          <p>This month&apos;s support</p>
           <div className="month-support-pack-list">
-            {checkInQuestions.map((question, index) => (
-              <span key={question}>
+            {monthlySupport.map((item, index) => (
+              <span key={item}>
                 <i>{String(index + 1).padStart(2, "0")}</i>
-                {question}
+                {item}
               </span>
             ))}
-          </div>
-          <div className="check-in-next-steps">
-            <span>Keep supporting</span>
-            <span>Try these activities</span>
-            <span>Consider asking a professional</span>
-            <span>Seek urgent help for severe or sudden symptoms</span>
           </div>
         </article>
       </div>
@@ -244,21 +240,21 @@ export function SupportPack() {
 
 const supportFlags = [
   {
-    level: "GREEN",
+    level: "EVERYDAY SUPPORT",
     title: "Keep supporting",
-    text: "Your child may be developing as expected for this stage. Continue everyday play, feeding, sleep, and bonding support.",
+    text: "Continue everyday play, bonding, feeding, sleep, and development support.",
     tone: "green",
   },
   {
-    level: "AMBER",
-    title: "Ask and observe",
-    text: "Something may be worth discussing with your GP, public health nurse, paediatrician, or therapist, especially if it continues or concerns you.",
+    level: "PRACTICAL NEXT STEP",
+    title: "Try this next",
+    text: "Simple activities, routines, or questions may help you support this area.",
     tone: "amber",
   },
   {
-    level: "RED",
-    title: "Seek guidance quickly",
-    text: "If your child loses skills, has sudden changes, appears very unwell, or you are seriously concerned, contact your healthcare provider or emergency services.",
+    level: "PROFESSIONAL GUIDANCE",
+    title: "Ask for guidance",
+    text: "If something continues to concern you, or if your child loses skills or seems unwell, contact your GP, public health nurse, paediatrician, therapist, or local healthcare provider.",
     tone: "urgent",
   },
 ];
@@ -268,9 +264,9 @@ export function SupportFlags() {
     <section className="section support-flags-section">
       <div className="container">
         <SectionHeader
-          eyebrow="CALM REFERRAL SIGNPOSTING"
-          title="Support flags, not pressure."
-          body="DevelopMonth can help parents understand whether something may simply need support at home, a question for a professional, or more urgent guidance."
+          eyebrow="GENTLE SIGNPOSTING"
+          title="Gentle guidance when extra support may help."
+          body="Most of DevelopMonth is about supporting positive growth. If something in a check-in may need extra support, DevelopMonth helps parents understand what to observe, what to try, and what to ask a professional."
         />
         <div className="support-flags-grid">
           {supportFlags.map((flag) => (
@@ -285,9 +281,8 @@ export function SupportFlags() {
           ))}
         </div>
         <p className="support-flags-note">
-          A support flag is not a diagnosis. It is an educational prompt to
-          help families prepare questions and seek professional advice when
-          appropriate.
+          This guidance is educational only. It does not diagnose or replace
+          professional advice, developmental assessment, or care.
         </p>
       </div>
     </section>
@@ -297,38 +292,38 @@ export function SupportFlags() {
 const supportBlocks = [
   {
     number: "01",
-    title: "Development check-in",
-    text: "Simple questions for the stage your child is in.",
+    title: "Development guidance",
+    text: "Understand what may be emerging this month.",
     tone: "aqua",
   },
   {
     number: "02",
-    title: "Support activities",
-    text: "Play, movement, bonding, feeding, and routine ideas to support development.",
+    title: "Play and connection",
+    text: "Simple ways to support learning, bonding, and confidence.",
     tone: "sage",
   },
   {
     number: "03",
-    title: "Feeding and sleep",
-    text: "Practical guidance for changing rhythms.",
+    title: "Movement and communication",
+    text: "Support strength, coordination, sounds, gestures, and early language.",
     tone: "aqua-light",
   },
   {
     number: "04",
-    title: "Questions to ask",
-    text: "Prompts for your GP, public health nurse, paediatrician, therapist, or care team.",
+    title: "Feeding and sleep",
+    text: "Gentle support for changing rhythms, feeding, weaning, and rest.",
     tone: "lime",
   },
   {
     number: "05",
-    title: "Support flags",
-    text: "Calm signposting when extra help may be useful.",
+    title: "Parent confidence",
+    text: "Feel calmer and more supported in daily routines.",
     tone: "teal",
   },
   {
     number: "06",
-    title: "Family support",
-    text: "Ways partners, grandparents, and carers can help.",
+    title: "Questions to ask",
+    text: "Prepare calm questions for your GP, public health nurse, paediatrician, therapist, or care team.",
     tone: "lime",
   },
 ];
@@ -340,7 +335,7 @@ export function SupportBlocks() {
         <SectionHeader
           eyebrow="INSIDE EACH SUPPORT PACK"
           title="What comes inside each monthly support pack?"
-          body="Monthly support packs include positive development guidance, parent-friendly check-ins, practical activities, family support, and gentle signposting when extra help may be useful."
+          body="Warm, practical guidance for everyday development — organised around the month your child is in."
         />
         <div className="support-block-grid">
           {supportBlocks.map((block) => (
@@ -358,8 +353,8 @@ export function SupportBlocks() {
           ))}
         </div>
         <p className="support-growth-note">
-          Educational support only. DevelopMonth does not diagnose, treat, or
-          replace professional developmental assessment.
+          Extra support signposting and research updates grow into the platform
+          over time.
         </p>
       </div>
     </section>
@@ -370,19 +365,19 @@ const personalisedSupportFeatures = [
   {
     number: "01",
     title: "Journal",
-    text: "Capture the small wins, questions, routines, and changes that matter.",
+    text: "Capture small wins, routines, questions, and changes that matter.",
     tone: "aqua",
   },
   {
     number: "02",
     title: "Calendar",
-    text: "Keep health checks, appointments, reminders, and monthly check-ins in one place.",
+    text: "Keep health checks, appointments, reminders, and monthly check-ins together.",
     tone: "sage",
   },
   {
     number: "03",
     title: "Check-ins",
-    text: "Reflect on development, feeding, sleep, bonding, movement, communication, and family support.",
+    text: "Reflect on development, feeding, sleep, bonding, communication, play, and family support.",
     tone: "lime",
   },
   {
@@ -408,7 +403,7 @@ export function PersonalisedSupport() {
         <SectionHeader
           eyebrow="PERSONALISED SUPPORT"
           title="Personalised around your child."
-          body="As your family uses DevelopMonth, your child’s journal, monthly check-ins, calendar, and saved support packs help personalise the guidance you see. DevelopMonth can help you notice progress, prepare better questions, choose practical activities, and understand when extra support may be useful — always as educational support, not medical diagnosis."
+          body="As your family uses DevelopMonth, your child’s journal, calendar, monthly check-ins, and saved support packs help shape the guidance you see. You choose what to add, and DevelopMonth uses that information to make support more relevant to your child and family."
         />
         <div className="personalised-support-grid">
           {personalisedSupportFeatures.map((feature) => (
@@ -424,6 +419,10 @@ export function PersonalisedSupport() {
         </div>
         <div className="companion-panel">
           <div className="companion-intro">
+            <GrowthMapIcon
+              className="companion-growth-map-icon"
+              ariaLabel="DevelopMonth GrowthMap"
+            />
             <p className="eyebrow">DEVELOPMONTH COMPANION</p>
             <p className="companion-control-note">
               Parent-controlled <span aria-hidden="true">·</span> You choose
@@ -434,9 +433,8 @@ export function PersonalisedSupport() {
               development journey month by month.
             </h3>
             <p>
-              DevelopMonth learns from the information you choose to add — your
-              journal, check-ins, calendar, and support goals — to personalise
-              monthly guidance for your child and family.
+              Always educational, parent-controlled, and designed to complement
+              professional guidance.
             </p>
           </div>
           <div className="companion-capabilities">
@@ -478,7 +476,7 @@ export function MonthJourney() {
         <SectionHeader
           eyebrow="DEVELOPMONTH YEAR ONE"
           title="Year One. One supported journey."
-          body="DevelopMonth organises the first year after birth into monthly development check-ins and support packs, so each stage feels clearer, calmer, and more manageable."
+          body="DevelopMonth organises the first year after birth into monthly development support packs, helping families celebrate growth, support each stage, and feel calmer about what comes next."
         />
         <div className="monthmap" aria-label="DevelopMonth Year One journey">
           {months.map(([number, title], index) => (
@@ -519,17 +517,14 @@ export function AdditionalNeeds() {
     <section className="section additional-needs-section">
       <div className="container additional-needs-shell">
         <div className="additional-needs-copy">
-          <p className="eyebrow">EVERY CHILD DEVELOPS DIFFERENTLY</p>
-          <h2>
-            Support without pressure.
-            <br />
-            Signposting without panic.
-          </h2>
+          <p className="eyebrow">POSITIVE SUPPORT FOR EVERY CHILD</p>
+          <h2>Every child develops differently.</h2>
+          <h3>Support without pressure. Signposting without panic.</h3>
           <p>
-            Every child develops differently. DevelopMonth is designed to help
-            families notice patterns calmly, ask better questions, and seek
-            professional support when needed — without fear, comparison, or
-            judgement.
+            DevelopMonth is designed to help families support development
+            positively while noticing patterns calmly. When extra support may
+            be useful, it helps parents prepare better questions and seek
+            guidance without fear, comparison, or judgement.
           </p>
           <p className="additional-needs-detail">
             If a check-in suggests an area may need extra support, DevelopMonth
@@ -564,9 +559,9 @@ export function TrustSection() {
       <div className="container">
         <div className="trust-layout">
           <SectionHeader
-            eyebrow="EARLY SUPPORT, WITHOUT COMPARISON"
-            title="Built for early support, not comparison."
-            body="Parenting information can feel fragmented, overwhelming, and comparison-driven. DevelopMonth is being built around calm developmental monitoring, responsible signposting, and practical family support."
+            eyebrow="CONFIDENT FAMILY SUPPORT"
+            title="Built for confident support, not comparison."
+            body="Parenting information can feel fragmented, overwhelming, and comparison-driven. DevelopMonth is being built around positive development support, parent-controlled personalisation, responsible signposting, and family confidence."
           />
           <div className="trust-statements">
             <p>
@@ -673,8 +668,8 @@ export function ResearchFund() {
 }
 
 const membershipBenefits = [
-  ["01", "Early access to Year One check-ins"],
-  ["02", "Shape support packs and referral signposting"],
+  ["01", "Early access to Year One support packs"],
+  ["02", "Shape personalised family guidance"],
   ["03", "Research updates and platform previews"],
 ];
 
@@ -693,9 +688,9 @@ export function FoundingMembership() {
           <h2>Become a founding family.</h2>
           <p>
             Founding families help shape DevelopMonth from the beginning —
-            supporting Year One development check-ins, monthly support packs,
-            referral signposting, research updates, and the wider PregMonth →
-            DevelopMonth journey.
+            supporting Year One development packs, personalised family
+            guidance, research updates, and the wider PregMonth → DevelopMonth
+            journey.
           </p>
           <small>
             Final membership details may evolve before launch. DevelopMonth is
@@ -751,9 +746,9 @@ export function WaitlistSection() {
             updates, and founding membership.
           </p>
           <div className="waitlist-points">
-            <p><span aria-hidden="true">✓</span> Monthly development check-ins</p>
-            <p><span aria-hidden="true">✓</span> Calm support flags</p>
-            <p><span aria-hidden="true">✓</span> Referral signposting</p>
+            <p><span aria-hidden="true">✓</span> Monthly support packs</p>
+            <p><span aria-hidden="true">✓</span> Personalised family support</p>
+            <p><span aria-hidden="true">✓</span> Research updates</p>
             <p><span aria-hidden="true">✓</span> DevelopMonth early access</p>
           </div>
         </div>

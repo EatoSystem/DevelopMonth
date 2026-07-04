@@ -23,9 +23,9 @@ export default function Home() {
       <main>
         <Hero />
         <CorePromise />
+        <PersonalisedSupport />
         <SupportPack />
         <SupportBlocks />
-        <PersonalisedSupport />
         <MonthJourney />
         <AdditionalNeeds />
         <SupportFlags />
