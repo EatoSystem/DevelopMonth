@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BumpMapIcon } from "./BumpMapIcon";
 import { GrowthMapIcon } from "./GrowthMapIcon";
 import { WaitlistForm } from "./WaitlistForm";
@@ -449,6 +450,15 @@ export function PersonalisedSupport() {
           personalise educational support and should never replace professional
           medical or developmental assessment.
         </p>
+        <div className="personalised-preview-action">
+          <Link className="button button-primary" href="/prototype">
+            Explore the Month 6 product preview{" "}
+            <span aria-hidden="true">→</span>
+          </Link>
+          <span>
+            Static concept · Fictional profile · Nothing is saved
+          </span>
+        </div>
       </div>
     </section>
   );
@@ -773,6 +783,7 @@ export function Footer() {
             <a href="#research">Research Fund</a>
             <a href="#waitlist">Waitlist</a>
             <a href="#foundation">Foundation</a>
+            <Link href="/prototype">Product preview</Link>
           </nav>
         </div>
         <div className="footer-bridge">

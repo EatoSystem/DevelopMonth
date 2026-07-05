@@ -6361,6 +6361,22 @@ a {
   background: transparent;
 }
 
+.personalised-preview-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 34px;
+}
+
+.personalised-preview-action > span {
+  color: rgba(31, 77, 77, 0.55);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* Year One is a gentle journey, not a scorecard. */
 
 .month-journey-section {
@@ -6733,6 +6749,12 @@ a {
   .personalised-support-note {
     margin-top: 32px;
     padding-top: 20px;
+  }
+
+  .personalised-preview-action {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
   }
 
   .monthmap {
