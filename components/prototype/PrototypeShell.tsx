@@ -477,13 +477,13 @@ function CompanionView() {
   return (
     <>
       <section className={`${styles.viewIntro} ${styles.companionIntro}`}>
-        <p className={styles.eyebrow}>DEVELOPMONTH COMPANION</p>
-        <h1>DevelopMonth Companion</h1>
-        <h2>A calm companion for the month you are in.</h2>
+        <p className={styles.eyebrow}>AION · DEVELOPMONTH COMPANION</p>
+        <h1>Meet Aion</h1>
+        <h2>Your calm child-development companion, month by month.</h2>
         <p>
-          The Companion is designed to organise the journal notes, check-ins,
-          reminders, and support ideas parents choose to add — helping prepare
-          summaries, questions, and practical next steps.
+          Aion is a future concept designed to organise the journal notes,
+          check-ins, reminders, and support ideas parents choose to add —
+          helping prepare summaries, questions, and practical next steps.
         </p>
       </section>
       <section className={styles.companionConcept}>
@@ -508,7 +508,7 @@ function CompanionView() {
               ariaLabel="DevelopMonth GrowthMap"
             />
             <span>
-              <small>EXAMPLE COMPANION SUMMARY</small>
+              <small>EXAMPLE AION SUMMARY</small>
               <strong>Month 6 is full of playful exploration.</strong>
             </span>
           </div>
@@ -529,8 +529,8 @@ function CompanionView() {
         </div>
       </section>
       <p className={styles.companionResponsibleNote}>
-        Parent-controlled. Educational only. Not a diagnosis, assessment, or
-        replacement for professional guidance.
+        Aion is parent-controlled educational support only. It is not live and
+        does not diagnose, assess, monitor, or replace professional guidance.
       </p>
     </>
   );

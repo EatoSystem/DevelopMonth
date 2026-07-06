@@ -1,91 +1,18 @@
+import { monthSixSupportPack } from "@/lib/month-content";
+
 export const prototypeViews = [
   { slug: "this-month", label: "This Month", number: "01" },
   { slug: "journal", label: "Journal", number: "02" },
   { slug: "calendar", label: "Calendar", number: "03" },
   { slug: "check-in", label: "Check-in", number: "04" },
   { slug: "support-pack", label: "Support Pack", number: "05" },
-  { slug: "companion", label: "Companion", number: "06" },
+  { slug: "companion", label: "Aion", number: "06" },
   { slug: "summary", label: "Summary", number: "07" },
 ] as const;
 
 export type PrototypeView = (typeof prototypeViews)[number]["slug"];
 
-export const monthSixPack = {
-  month: 6,
-  title: "Starting solids and movement",
-  introduction:
-    "Month 6 can bring new tastes, stronger movement, growing curiosity, and more back-and-forth connection. This pack offers calm ideas to support the everyday moments already happening in your family.",
-  themes: [
-    {
-      title: "Growing through play",
-      colour: "aqua",
-      summary:
-        "Use floor time, reaching games, songs, and face-to-face play to support curiosity and shared attention.",
-      ideas: [
-        "Place a favourite toy just within comfortable reach.",
-        "Copy sounds and expressions, then pause for a response.",
-        "Offer supervised floor play in short, enjoyable bursts.",
-      ],
-    },
-    {
-      title: "Feeding and new textures",
-      colour: "sage",
-      summary:
-        "Introduce suitable foods and textures at your child’s pace while keeping milk feeds central to their nutrition.",
-      ideas: [
-        "Choose a calm time when your child is alert and supported upright.",
-        "Let touching, smelling, and exploring food be part of learning.",
-        "Follow current local guidance on allergens, choking prevention, and safe preparation.",
-      ],
-    },
-    {
-      title: "Movement and strength",
-      colour: "lime",
-      summary:
-        "Everyday reaching, rolling, supported sitting, and floor play can help build strength and coordination.",
-      ideas: [
-        "Give your child space to move freely on a safe floor surface.",
-        "Place objects on both sides to invite turning and reaching.",
-        "Keep movement playful rather than treating it as a test.",
-      ],
-    },
-    {
-      title: "Sleep and rhythm",
-      colour: "teal",
-      summary:
-        "Sleep can continue to change as feeding, movement, and daily routines evolve.",
-      ideas: [
-        "Use a short, familiar wind-down routine.",
-        "Notice patterns without expecting every day to look the same.",
-        "Follow current safer-sleep guidance for every sleep.",
-      ],
-    },
-    {
-      title: "Bonding and confidence",
-      colour: "aqua",
-      summary:
-        "Warm responses, shared delight, and familiar routines help your child feel secure while strengthening parent confidence.",
-      ideas: [
-        "Name what your child is looking at or reaching towards.",
-        "Celebrate effort and connection rather than outcomes.",
-        "Share care in ways that work for your family and support network.",
-      ],
-    },
-    {
-      title: "Questions to ask",
-      colour: "sage",
-      summary:
-        "Keep a calm list for your GP, public health nurse, paediatrician, therapist, or care team.",
-      ideas: [
-        "What textures and foods are suitable to try next?",
-        "How can we support movement comfortably during everyday play?",
-        "Is there anything in feeding, sleep, movement, or communication we should discuss?",
-      ],
-    },
-  ],
-  safetyNote:
-    "This support pack is educational and does not replace professional medical advice, diagnosis, developmental assessment, or treatment.",
-};
+export const monthSixPack = monthSixSupportPack;
 
 export const checkInAreas = [
   {

@@ -73,12 +73,13 @@ export function Header() {
         </a>
         <nav aria-label="Primary navigation">
           <a href="#vision">Vision</a>
-          <a href="#year-one">Year One</a>
+          <Link href="/months">Year One</Link>
+          <Link href="/aion">Aion</Link>
           <a href="#support-blocks">Support packs</a>
           <a href="#foundation">PregMonth</a>
-          <a className="header-cta" href="#waitlist">
-            Preview waitlist <span aria-hidden="true">↗</span>
-          </a>
+          <Link className="header-cta" href="/prototype">
+            Month 6 preview <span aria-hidden="true">↗</span>
+          </Link>
         </nav>
       </div>
     </header>
@@ -120,23 +121,21 @@ export function Hero() {
         <div className="hero-copy">
           <p className="eyebrow eyebrow-rule">DEVELOPMONTH</p>
           <h1>
-            Support your child&apos;s development,
+            Child development support,
             <br />
             month by month.
           </h1>
           <p className="hero-intro">
-            Every month after birth brings new ways your child may grow,
-            connect, move, communicate, feed, sleep, play, and learn.
-            DevelopMonth is being designed to give families positive monthly
-            support packs, with future guidance shaped around the journal,
-            calendar, and check-ins they choose to add.
+            DevelopMonth helps parents support their child&apos;s growth with
+            monthly development packs, practical ideas, gentle check-ins, saved
+            questions, and Aion — your future child-development companion.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#waitlist">
-              Preview the Waitlist <span aria-hidden="true">↗</span>
-            </a>
-            <a className="button button-text" href="#year-one">
-              Explore Year One <span aria-hidden="true">↓</span>
+            <Link className="button button-primary" href="/prototype">
+              Explore Month 6 Preview <span aria-hidden="true">↗</span>
+            </Link>
+            <a className="button button-text" href="#waitlist">
+              Join the Founding Families <span aria-hidden="true">↓</span>
             </a>
           </div>
           <p className="hero-microcopy">
@@ -394,7 +393,7 @@ const personalisedSupportFeatures = [
  *
  * Future domain boundaries may include ChildProfile, Journal, Calendar,
  * MonthlyCheckIn, SupportPack, DevelopmentSummary, QuestionsForProfessional,
- * and DevelopMonthCompanion. No account, persistence, or personalisation
+ * and AionCompanion. No account, persistence, or personalisation
  * infrastructure is implemented in this homepage preview.
  */
 export function PersonalisedSupport() {
@@ -424,25 +423,22 @@ export function PersonalisedSupport() {
               className="companion-growth-map-icon"
               ariaLabel="DevelopMonth GrowthMap"
             />
-            <p className="eyebrow">DEVELOPMONTH COMPANION</p>
+            <p className="eyebrow">MEET AION · DEVELOPMONTH COMPANION</p>
             <p className="companion-control-note">
               Parent-controlled <span aria-hidden="true">·</span> You choose
               what to add
             </p>
-            <h3>
-              A concept for a calm companion that could help organise your
-              child&apos;s development journey month by month.
-            </h3>
+            <h3>Aion is your calm child-development companion, month by month.</h3>
             <p>
-              Always educational, parent-controlled, and designed to complement
-              professional guidance.
+              A future support layer designed to explain this month, organise
+              parent-chosen information, and complement professional guidance.
             </p>
           </div>
           <div className="companion-capabilities">
-            <p>Could summarise journal notes and positive development patterns.</p>
-            <p>Could personalise support packs and everyday activities.</p>
-            <p>Could prepare questions and monthly development summaries.</p>
-            <p>Could gently signpost when extra support may be useful.</p>
+            <p>Could explain the month using approved content.</p>
+            <p>Could organise journal notes, reminders, and small wins.</p>
+            <p>Could prepare questions and monthly family summaries.</p>
+            <p>Could suggest practical ideas from the monthly support pack.</p>
           </div>
         </div>
         <p className="personalised-support-note">
@@ -451,6 +447,9 @@ export function PersonalisedSupport() {
           never replace professional medical or developmental assessment.
         </p>
         <div className="personalised-preview-action">
+          <Link className="button button-text" href="/aion">
+            Meet Aion <span aria-hidden="true">→</span>
+          </Link>
           <Link className="button button-primary" href="/prototype">
             Explore the Month 6 product preview{" "}
             <span aria-hidden="true">→</span>
@@ -679,8 +678,10 @@ export function ResearchFund() {
 
 const membershipBenefits = [
   ["01", "Early access to Year One support packs"],
-  ["02", "Shape personalised family guidance"],
-  ["03", "Research updates and platform previews"],
+  ["02", "Founder updates and prototype testing"],
+  ["03", "Research participation opportunities"],
+  ["04", "Priority access to future Aion features"],
+  ["05", "Support future research programmes"],
 ];
 
 const membershipLevels = [
@@ -705,7 +706,8 @@ export function FoundingMembership() {
           <small>
             Final membership details may evolve before launch. DevelopMonth is
             educational and supportive only and does not provide diagnosis,
-            treatment, or developmental assessment.
+            treatment, or developmental assessment. No payment or subscription
+            functionality is active.
           </small>
         </div>
         <div className="membership-card">
@@ -734,8 +736,9 @@ export function FoundingMembership() {
               </p>
             ))}
           </div>
-          <a className="button button-primary" href="#waitlist">
-            Preview registration <span aria-hidden="true">↗</span>
+            <a className="button button-primary" href="#waitlist">
+              Preview founding-family interest{" "}
+              <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
@@ -778,9 +781,12 @@ export function Footer() {
           </a>
           <nav aria-label="Footer navigation">
             <a href="#vision">Vision</a>
-            <a href="#year-one">Year One</a>
+            <Link href="/months">Year One</Link>
+            <Link href="/aion">Meet Aion</Link>
             <a href="#support-blocks">Support blocks</a>
-            <a href="#research">Research Fund</a>
+            <Link href="/membership">Membership</Link>
+            <Link href="/research">Research</Link>
+            <Link href="/safety">Safety</Link>
             <a href="#waitlist">Waitlist preview</a>
             <a href="#foundation">Foundation</a>
             <Link href="/prototype">Product preview</Link>
