@@ -7,7 +7,7 @@ yet.
 
 | Field | Value |
 | --- | --- |
-| Prototype version | Pending deployment commit |
+| Prototype version | Record the deployed commit before the first session |
 | Parent target | 6–8 participants |
 | Professional target | 5–7 scoped reviewers |
 | Parent sessions completed | 0 |
@@ -67,4 +67,3 @@ Severity:
 | Month 6 sources and version approved | Required | Draft content only | Pending |
 | Mobile/accessibility issues retested | Required | Technical build only | Pending |
 | Repeat monthly value demonstrated | Required | No participant data | Pending |
-

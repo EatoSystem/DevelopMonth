@@ -25,7 +25,7 @@ function PrototypeHeader() {
         <GrowthMapIcon className={styles.brandIcon} />
         <span>
           <strong>DevelopMonth</strong>
-          <small>Static product concept</small>
+          <small>Static research prototype</small>
         </span>
       </Link>
       <div className={styles.headerActions}>
@@ -79,10 +79,49 @@ function ContextBar({ view }: PrototypeShellProps) {
         <strong>{currentView?.label}</strong>
       </div>
       <p>
-        This is a static concept. Nothing entered here is saved or sent
-        anywhere.
+        Fictional Month 6 content · Nothing entered here is saved or sent.
       </p>
     </div>
+  );
+}
+
+function PrototypeDisclosure() {
+  return (
+    <section
+      className={styles.prototypeDisclosure}
+      aria-labelledby="prototype-disclosure-title"
+    >
+      <div>
+        <span>RESEARCH AND FEEDBACK ONLY</span>
+        <strong id="prototype-disclosure-title">Static prototype</strong>
+      </div>
+      <div className={styles.prototypeDisclosureLabels}>
+        <span>Fictional content</span>
+        <span>Saves nothing</span>
+        <span>Parent-controlled concept</span>
+      </div>
+      <p>
+        Educational support only. This prototype is not medical advice or a
+        developmental assessment and does not replace professional guidance.
+      </p>
+    </section>
+  );
+}
+
+function MonthSixReviewStatus() {
+  return (
+    <aside
+      className={styles.reviewStatus}
+      aria-label="Month 6 internal content status"
+    >
+      <strong>Month 6 · Draft content</strong>
+      <div>
+        <span>Requires professional review</span>
+        <span>Source register required</span>
+        <span>Jurisdiction to be confirmed</span>
+        <span>Not for parent reliance yet</span>
+      </div>
+    </aside>
   );
 }
 
@@ -490,12 +529,15 @@ export function PrototypeShell({ view }: PrototypeShellProps) {
         </aside>
         <main className={styles.main}>
           <ContextBar view={view} />
+          <PrototypeDisclosure />
+          <MonthSixReviewStatus />
           <CurrentView view={view} />
         </main>
       </div>
       <footer className={styles.footer}>
         <p>
-          DevelopMonth provides educational and supportive information only and
+          Static prototype with fictional content for research and feedback
+          only. Nothing is saved. DevelopMonth provides educational support and
           does not replace professional medical advice, diagnosis,
           developmental assessment, or treatment.
         </p>

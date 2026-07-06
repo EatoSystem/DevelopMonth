@@ -31,36 +31,44 @@ export function WaitlistForm() {
         <span className="success-mark" aria-hidden="true">
           ✓
         </span>
-        <p className="eyebrow">YOU’RE ON THE LIST</p>
-        <h3>You’re on the DevelopMonth waitlist.</h3>
-        <p>We’ll be in touch soon.</p>
+        <p className="eyebrow">PREVIEW COMPLETE</p>
+        <h3>
+          Thanks — this is a preview form. The live waitlist will open soon.
+        </h3>
+        <p>No details were saved or sent.</p>
       </div>
     );
   }
 
   return (
-    <form className="waitlist-form" onSubmit={handleSubmit}>
+    <form className="waitlist-form" onSubmit={handleSubmit} autoComplete="off">
+      <div className="form-preview-notice" role="note">
+        <strong>Preview form</strong>
+        <span>
+          Please use fictional details. Nothing entered here is saved or sent.
+        </span>
+      </div>
       <div className="form-grid">
         <div className="field">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Example name</label>
           <input
             id="name"
             name="name"
             type="text"
-            autoComplete="name"
-            placeholder="Your name"
+            autoComplete="off"
+            placeholder="For example: Alex"
             required
           />
         </div>
         <div className="field">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Example email</label>
           <input
             id="email"
             name="email"
             type="email"
-            autoComplete="email"
+            autoComplete="off"
             inputMode="email"
-            placeholder="you@example.com"
+            placeholder="alex@example.com"
             required
           />
         </div>
@@ -85,28 +93,31 @@ export function WaitlistForm() {
 
       <div className="field">
         <label htmlFor="interest">
-          Child age / due month / interest area{" "}
+          Example age / due month / interest area{" "}
           <span className="optional">Optional</span>
         </label>
         <input
           id="interest"
           name="interest"
           type="text"
-          placeholder="For example: Month 4, feeding, or research"
+          autoComplete="off"
+          placeholder="For example: Month 4 or feeding"
         />
       </div>
 
       <label className="checkbox-row">
         <input type="checkbox" name="consent" required />
-        <span>I agree to receive updates about DevelopMonth.</span>
+        <span>
+          I understand this preview does not submit or save my details.
+        </span>
       </label>
 
       <button className="button button-primary form-submit" type="submit">
-        Join the Waitlist
+        Preview the confirmation
         <span aria-hidden="true">↗</span>
       </button>
       <p className="form-note">
-        No noise. Just thoughtful DevelopMonth updates.
+        The live waitlist and consent process will open separately.
       </p>
     </form>
   );

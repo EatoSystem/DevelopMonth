@@ -232,6 +232,106 @@
   text-align: right;
 }
 
+.prototypeDisclosure {
+  display: grid;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 22px 24px;
+  border: 1px solid rgba(31, 77, 77, 0.12);
+  border-radius: 24px;
+  background: var(--dm-aqua-light);
+  grid-template-columns: minmax(150px, 0.45fr) minmax(300px, 0.9fr) minmax(320px, 1fr);
+  gap: 24px;
+}
+
+.prototypeDisclosure > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prototypeDisclosure > div:first-child span {
+  color: rgba(31, 77, 77, 0.52);
+  font-size: 7px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.prototypeDisclosure strong {
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.prototypeDisclosureLabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.prototypeDisclosureLabels span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.prototypeDisclosure > p {
+  margin: 0;
+  color: var(--pm-ink-soft);
+  font-size: 9px;
+  line-height: 1.65;
+}
+
+.reviewStatus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 46px;
+  padding: 14px 18px;
+  border: 1px solid rgba(31, 77, 77, 0.12);
+  border-radius: 18px;
+  background: rgba(224, 233, 168, 0.5);
+}
+
+.reviewStatus > strong {
+  min-width: max-content;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.reviewStatus > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 16px;
+}
+
+.reviewStatus span {
+  position: relative;
+  padding-left: 10px;
+  color: var(--pm-ink-soft);
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.reviewStatus span::before {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+  background: var(--dm-teal);
+  content: "";
+}
+
 .eyebrow {
   margin: 0 0 18px;
 }
@@ -1045,6 +1145,14 @@
     padding-inline: 32px;
   }
 
+  .prototypeDisclosure {
+    grid-template-columns: minmax(160px, 0.55fr) minmax(0, 1fr);
+  }
+
+  .prototypeDisclosure > p {
+    grid-column: 1 / -1;
+  }
+
   .monthHero {
     padding: 44px;
     grid-template-columns: 1fr;
@@ -1165,6 +1273,27 @@
   .contextBar p {
     margin-top: 10px;
     text-align: left;
+  }
+
+  .prototypeDisclosure {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .prototypeDisclosure > p {
+    grid-column: auto;
+  }
+
+  .reviewStatus {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+    gap: 12px;
+  }
+
+  .reviewStatus > div {
+    justify-content: flex-start;
   }
 
   .monthHero {

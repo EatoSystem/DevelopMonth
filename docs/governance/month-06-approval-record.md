@@ -19,6 +19,7 @@ safer-sleep, urgent-care, or developmental guidance.
 | Professional review coordinator | Unassigned |
 | Jurisdiction | Ireland proposed; not yet confirmed |
 | Last edited | 5 July 2026 |
+| Source register | Required and incomplete |
 | Approved for product testing | Yes, with fictional profile and static disclaimer |
 | Approved for parent reliance | No |
 | Next review date | Before any public-content release |
@@ -73,4 +74,3 @@ Decision values:
 
 No release decision has been made. A qualified professional review cannot be
 substituted by an internal product review or automated system.
-

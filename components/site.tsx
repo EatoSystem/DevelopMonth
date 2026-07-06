@@ -77,7 +77,7 @@ export function Header() {
           <a href="#support-blocks">Support packs</a>
           <a href="#foundation">PregMonth</a>
           <a className="header-cta" href="#waitlist">
-            Join waitlist <span aria-hidden="true">↗</span>
+            Preview waitlist <span aria-hidden="true">↗</span>
           </a>
         </nav>
       </div>
@@ -127,13 +127,13 @@ export function Hero() {
           <p className="hero-intro">
             Every month after birth brings new ways your child may grow,
             connect, move, communicate, feed, sleep, play, and learn.
-            DevelopMonth gives families positive monthly support packs
-            personalised around the journal, calendar, and check-ins they
-            choose to add.
+            DevelopMonth is being designed to give families positive monthly
+            support packs, with future guidance shaped around the journal,
+            calendar, and check-ins they choose to add.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#waitlist">
-              Join the Waitlist <span aria-hidden="true">↗</span>
+              Preview the Waitlist <span aria-hidden="true">↗</span>
             </a>
             <a className="button button-text" href="#year-one">
               Explore Year One <span aria-hidden="true">↓</span>
@@ -221,7 +221,7 @@ export function SupportPack() {
         <article className="month-support-pack development-check-in-card">
           <div className="month-support-pack-top">
             <span>MONTH 06</span>
-            <small>DEVELOPMONTH</small>
+            <small>DRAFT EXAMPLE · REVIEW REQUIRED</small>
           </div>
           <h3>Starting solids and movement</h3>
           <p>This month&apos;s support</p>
@@ -384,7 +384,7 @@ const personalisedSupportFeatures = [
   {
     number: "04",
     title: "Personalised support",
-    text: "Receive guidance shaped around your child’s month, your notes, and your family’s needs.",
+    text: "Explore how guidance could be shaped around your child’s month, your notes, and your family’s needs.",
     tone: "teal",
   },
 ];
@@ -404,7 +404,7 @@ export function PersonalisedSupport() {
         <SectionHeader
           eyebrow="PERSONALISED SUPPORT"
           title="Personalised around your child."
-          body="As your family uses DevelopMonth, your child’s journal, calendar, monthly check-ins, and saved support packs help shape the guidance you see. You choose what to add, and DevelopMonth uses that information to make support more relevant to your child and family."
+          body="The proposed product would use only the journal, calendar, monthly check-ins, and support goals a parent chooses to add. This parent-controlled information could make future guidance more relevant to each child and family."
         />
         <div className="personalised-support-grid">
           {personalisedSupportFeatures.map((feature) => (
@@ -430,8 +430,8 @@ export function PersonalisedSupport() {
               what to add
             </p>
             <h3>
-              A calm companion that helps organise your child&apos;s
-              development journey month by month.
+              A concept for a calm companion that could help organise your
+              child&apos;s development journey month by month.
             </h3>
             <p>
               Always educational, parent-controlled, and designed to complement
@@ -439,16 +439,16 @@ export function PersonalisedSupport() {
             </p>
           </div>
           <div className="companion-capabilities">
-            <p>Summarise journal notes and positive development patterns.</p>
-            <p>Personalise support packs and everyday activities.</p>
-            <p>Prepare questions and monthly development summaries.</p>
-            <p>Gently signpost when extra support may be useful.</p>
+            <p>Could summarise journal notes and positive development patterns.</p>
+            <p>Could personalise support packs and everyday activities.</p>
+            <p>Could prepare questions and monthly development summaries.</p>
+            <p>Could gently signpost when extra support may be useful.</p>
           </div>
         </div>
         <p className="personalised-support-note">
-          Parents choose what they add. DevelopMonth uses that information to
-          personalise educational support and should never replace professional
-          medical or developmental assessment.
+          Parents choose what they add. The proposed product would use that
+          information only for parent-controlled educational support and should
+          never replace professional medical or developmental assessment.
         </p>
         <div className="personalised-preview-action">
           <Link className="button button-primary" href="/prototype">
@@ -735,7 +735,7 @@ export function FoundingMembership() {
             ))}
           </div>
           <a className="button button-primary" href="#waitlist">
-            Register your interest <span aria-hidden="true">↗</span>
+            Preview registration <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
@@ -748,12 +748,12 @@ export function WaitlistSection() {
     <section className="section waitlist-section" id="waitlist">
       <div className="container waitlist-shell">
         <div className="waitlist-copy">
-          <p className="eyebrow">JOIN THE FOUNDING GROUP</p>
-          <h2>Join the DevelopMonth waitlist.</h2>
+          <p className="eyebrow">WAITLIST PREVIEW</p>
+          <h2>Preview the DevelopMonth waitlist.</h2>
           <p>
-            Help shape a meaningful family-development platform and be first
-            to hear about Year One support packs, early access, research
-            updates, and founding membership.
+            The live waitlist is not open yet. This preview shows the details
+            DevelopMonth may ask for when research recruitment and early access
+            begin.
           </p>
           <div className="waitlist-points">
             <p><span aria-hidden="true">✓</span> Monthly support packs</p>
@@ -781,7 +781,7 @@ export function Footer() {
             <a href="#year-one">Year One</a>
             <a href="#support-blocks">Support blocks</a>
             <a href="#research">Research Fund</a>
-            <a href="#waitlist">Waitlist</a>
+            <a href="#waitlist">Waitlist preview</a>
             <a href="#foundation">Foundation</a>
             <Link href="/prototype">Product preview</Link>
           </nav>

@@ -8,6 +8,21 @@ parent-controlled, and safe before building accounts or infrastructure.
 This plan prepares testing; it does not claim that participant research has
 already happened.
 
+## Research pack
+
+Use this plan with:
+
+- `docs/research/recruitment-and-consent-pack.md`
+- `docs/research/findings-register.md`
+- `docs/research/accessibility-visual-qa-checklist.md`
+- `docs/governance/month-06-approval-record.md`
+- `docs/content/month-06-source-register.md`
+- The password-gated `/prototype` journey
+
+Before each session, record the deployed commit and confirm that the visible
+prototype says it is static, fictional, saves nothing, and is for research and
+feedback only.
+
 ## Research questions
 
 1. Can parents explain DevelopMonth in their own words after seeing This Month?
@@ -99,6 +114,9 @@ intentionally disabled.”
 7. Review the monthly summary boundary.
 8. List authoritative sources and expected review frequency.
 9. Identify content outside the reviewer’s scope.
+10. Add or verify relevant entries in the Month 6 source register.
+11. Record whether the draft is suitable only for research or can progress
+    toward parent-facing review.
 
 ## Observation scorecard
 
@@ -154,4 +172,3 @@ backlogs.
 - Month 6 pack has sources, named reviewers, version, and review date
 - Key mobile and accessibility issues resolved and retested
 - Clear evidence that the product creates repeat monthly value
-
