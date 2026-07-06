@@ -14,6 +14,32 @@ type PrototypeShellProps = {
   view: PrototypeView;
 };
 
+const growthThemes = [
+  {
+    title: "Movement",
+    body: "Reaching, rolling, sitting practice, and more floor play.",
+  },
+  {
+    title: "Feeding",
+    body: "New tastes, textures, routines, and family food confidence.",
+  },
+  {
+    title: "Connection",
+    body: "More eye contact, laughter, back-and-forth play, and shared attention.",
+  },
+  {
+    title: "Curiosity",
+    body: "More interest in objects, sounds, faces, and everyday routines.",
+  },
+] as const;
+
+const questionsToSave = [
+  "How can I make starting solids feel calm?",
+  "What should I ask if feeding feels stressful?",
+  "How much floor play is useful at this stage?",
+  "What should I mention at the next health check?",
+] as const;
+
 function viewHref(view: PrototypeView) {
   return view === "this-month" ? "/prototype" : `/prototype/${view}`;
 }
@@ -131,14 +157,30 @@ function ThisMonthView() {
       <section className={styles.monthHero}>
         <div>
           <p className={styles.eyebrow}>THIS MONTH · MONTH 06</p>
-          <h1>{monthSixPack.title}</h1>
-          <p>{monthSixPack.introduction}</p>
+          <h1>Rory’s Month 6 Support Pack</h1>
+          <h2 className={styles.monthHeroSubtitle}>
+            Starting solids, movement, and connection
+          </h2>
+          <p>
+            Month 6 can bring new tastes, stronger movement, growing curiosity,
+            and more back-and-forth connection. This support pack brings
+            together calm ideas, journal prompts, check-ins, reminders, and
+            questions for this stage.
+          </p>
           <div className={styles.themeChips} aria-label="Month 6 themes">
-            <span>Play</span>
             <span>Feeding</span>
             <span>Movement</span>
+            <span>Play</span>
             <span>Connection</span>
           </div>
+          <div className={styles.monthHeroActions}>
+            <Link href="/prototype/check-in">Start check-in</Link>
+            <Link href="/prototype/journal">Add journal note</Link>
+          </div>
+          <p className={styles.monthHeroPreviewNote}>
+            This is a static concept. Nothing entered here is saved or sent
+            anywhere.
+          </p>
         </div>
         <div className={styles.monthHeroVisual}>
           <GrowthMapIcon
@@ -150,6 +192,31 @@ function ThisMonthView() {
         </div>
       </section>
 
+      <section
+        className={styles.growthSection}
+        aria-labelledby="month-growth-title"
+      >
+        <div className={styles.growthHeading}>
+          <div>
+            <p className={styles.eyebrow}>POSITIVE DEVELOPMENT</p>
+            <h2 id="month-growth-title">What’s growing this month?</h2>
+          </div>
+          <p>
+            Every child develops differently, but Month 6 may bring new ways
+            to explore, connect, move, feed, and play.
+          </p>
+        </div>
+        <div className={styles.growthGrid}>
+          {growthThemes.map((theme, index) => (
+            <article key={theme.title}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{theme.title}</h3>
+              <p>{theme.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className={styles.sectionBlock}>
         <div className={styles.sectionHeading}>
           <div>
@@ -158,46 +225,51 @@ function ThisMonthView() {
           </div>
           <p>
             Add only what feels useful. DevelopMonth organises the month around
-            your family, without asking you to track every moment.
+            your child and family, without asking you to track every moment.
           </p>
         </div>
         <div className={styles.quickGrid}>
           <Link href="/prototype/journal" className={styles.quickCard}>
             <span>01</span>
             <h3>Journal</h3>
-            <p>Two small wins captured this month.</p>
-            <strong>Open journal →</strong>
+            <p>2 small wins captured this month.</p>
+            <strong>Add a note →</strong>
           </Link>
           <Link href="/prototype/calendar" className={styles.quickCard}>
             <span>02</span>
             <h3>Calendar</h3>
-            <p>Your next family reminder is 12 July.</p>
-            <strong>View calendar →</strong>
+            <p>Next family reminder: 12 July.</p>
+            <strong>View reminders →</strong>
           </Link>
           <Link href="/prototype/check-in" className={styles.quickCard}>
             <span>03</span>
             <h3>Check-in</h3>
             <p>A short monthly reflection, never a test.</p>
-            <strong>Preview check-in →</strong>
+            <strong>Start check-in →</strong>
           </Link>
           <Link href="/prototype/support-pack" className={styles.quickCard}>
             <span>04</span>
             <h3>Support pack</h3>
-            <p>Six warm, practical areas for Month 6.</p>
-            <strong>Explore the pack →</strong>
+            <p>Six warm, practical ideas for Month 6.</p>
+            <strong>Explore support →</strong>
           </Link>
         </div>
       </section>
 
       <section className={styles.todayLayout}>
         <article className={styles.todayCard}>
-          <p className={styles.eyebrow}>AN IDEA FOR TODAY</p>
+          <p className={styles.eyebrow}>TODAY’S SUPPORT IDEA</p>
+          <span className={styles.todayDuration}>Today’s 5-minute idea</span>
           <h2>Reach, roll, laugh, repeat.</h2>
           <p>
             Place a soft toy slightly to one side during floor play. Give Rory
             time to look, turn, reach, or simply enjoy the game with you.
           </p>
-          <span>PLAY · MOVEMENT · CONNECTION</span>
+          <div className={styles.todayTags} aria-label="Support idea themes">
+            <span>Play</span>
+            <span>Movement</span>
+            <span>Connection</span>
+          </div>
         </article>
         <article className={styles.nextMoment}>
           <p className={styles.eyebrow}>NEXT FAMILY MOMENT</p>
@@ -206,6 +278,32 @@ function ThisMonthView() {
           <h3>Try a new texture at lunch</h3>
           <p>A gentle family reminder—not a target or deadline.</p>
         </article>
+      </section>
+
+      <section
+        className={styles.questionsSection}
+        aria-labelledby="questions-title"
+      >
+        <div className={styles.questionsHeading}>
+          <div>
+            <p className={styles.eyebrow}>PARENT-CONTROLLED NOTES</p>
+            <h2 id="questions-title">Questions you may want to save</h2>
+          </div>
+          <div className={styles.questionsAction}>
+            <button type="button" disabled>
+              Save to questions
+            </button>
+            <span>Preview only — nothing is saved.</span>
+          </div>
+        </div>
+        <div className={styles.questionsList}>
+          {questionsToSave.map((question, index) => (
+            <article key={question}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{question}</p>
+            </article>
+          ))}
+        </div>
       </section>
     </>
   );
@@ -277,7 +375,7 @@ function CalendarView() {
             <span>JULY</span>
             <strong>Month 6</strong>
           </div>
-          <p>Four moments saved</p>
+          <p>Four fictional moments</p>
         </div>
         <div className={styles.eventList}>
           {calendarEvents.map((event) => (
@@ -378,28 +476,29 @@ function SupportPackView() {
 function CompanionView() {
   return (
     <>
-      <section className={styles.viewIntro}>
+      <section className={`${styles.viewIntro} ${styles.companionIntro}`}>
         <p className={styles.eyebrow}>DEVELOPMONTH COMPANION</p>
-        <h1>Calm support, shaped by your choices.</h1>
+        <h1>DevelopMonth Companion</h1>
+        <h2>A calm companion for the month you are in.</h2>
         <p>
-          The Companion concept organises information a parent chooses to add.
-          It offers educational summaries and prompts—not surveillance,
-          diagnosis, or medical assessment.
+          The Companion is designed to organise the journal notes, check-ins,
+          reminders, and support ideas parents choose to add — helping prepare
+          summaries, questions, and practical next steps.
         </p>
       </section>
       <section className={styles.companionConcept}>
         <div className={styles.companionSources}>
-          <p className={styles.eyebrow}>YOU CONTROL THE SOURCES</p>
-          <h2>Included in this example</h2>
-          <div>
-            <span>✓ Month 6 support pack</span>
-            <span>✓ Two journal notes</span>
-            <span>✓ Calendar reminders</span>
-            <span>○ Monthly check-in not added</span>
-          </div>
+          <p className={styles.eyebrow}>HOW IT COULD HELP</p>
+          <h2>Built around your choices.</h2>
+          <ul className={styles.companionCapabilityList}>
+            <li>Organising notes</li>
+            <li>Preparing questions</li>
+            <li>Summarising the month</li>
+            <li>Suggesting support ideas from the support pack</li>
+          </ul>
           <small>
-            Parents can leave information out, remove it, or stop using
-            personalisation.
+            Future concept only. Parents would choose what to include, leave
+            out, or remove.
           </small>
         </div>
         <div className={styles.companionOutput}>
@@ -424,11 +523,15 @@ function CompanionView() {
             <span>Prepare: notes for the public health nurse visit</span>
           </div>
           <small>
-            Generated-style copy shown for product testing only. No automated
+            Illustrative future summary for product testing only. No automated
             personalisation is implemented.
           </small>
         </div>
       </section>
+      <p className={styles.companionResponsibleNote}>
+        Parent-controlled. Educational only. Not a diagnosis, assessment, or
+        replacement for professional guidance.
+      </p>
     </>
   );
 }

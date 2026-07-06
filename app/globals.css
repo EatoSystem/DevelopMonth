@@ -6848,3 +6848,36 @@ a {
     gap: 6px;
   }
 }
+
+/* Validation QA: keep important preview and safety copy comfortably readable. */
+
+.form-preview-notice {
+  font-size: 11px;
+}
+
+.optional,
+.form-note {
+  color: var(--pm-ink-soft);
+  font-size: 10px;
+}
+
+.footer-bottom p {
+  color: var(--pm-ink-soft);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer-bottom > span {
+  color: var(--pm-ink-soft);
+  font-size: 11px;
+}
+
+/* Give every interactive control a consistent high-contrast keyboard marker. */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--dm-teal-dark);
+  outline-offset: 3px;
+}
