@@ -32,10 +32,10 @@ export default function MonthSixPage() {
         body={monthSixDevelopmentMonth.overview}
         eyebrow="MONTH 06 · DRAFT SUPPORT PACK"
         primaryHref="/prototype"
-        primaryLabel="Explore the static product prototype"
+        primaryLabel="Explore the static Month 6 prototype"
         secondaryHref="/aion"
-        secondaryLabel="Meet Aion"
-        title="Starting solids, movement, and connection."
+        secondaryLabel="Meet the future Aion concept"
+        title="Starting solids and movement."
       />
       <PreviewOnlyNotice />
       <ProfessionalReviewStatus month={monthSixDevelopmentMonth} />
@@ -53,4 +53,3 @@ export default function MonthSixPage() {
     </FoundationPageShell>
   );
 }
-

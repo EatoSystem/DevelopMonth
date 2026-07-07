@@ -18,13 +18,13 @@ export default function AionPage() {
   return (
     <FoundationPageShell>
       <PageHero
-        body="Aion helps parents understand their child’s month of development, save useful questions, and organise support around their family’s rhythm."
+        body="Aion is a future, parent-controlled companion concept. It would use reviewed monthly content and the information parents choose to add to organise calm guidance, useful questions, and monthly summaries."
         eyebrow="AION · PRONOUNCED EYE-ON"
         primaryHref="/months/month-6"
         primaryLabel="Explore Month 6 examples"
         secondaryHref="/prototype/companion"
-        secondaryLabel="Open the static companion concept"
-        title="Your calm child-development companion, month by month."
+        secondaryLabel="Open the static Aion concept"
+        title="A calm companion for child development, month by month."
       />
       <PreviewOnlyNotice />
       <CompanionCard prompts={monthSixDevelopmentMonth.companionPrompts} />

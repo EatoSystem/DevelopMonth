@@ -252,13 +252,13 @@ export const monthSixSupportPack: MonthlySupportPack = {
   month: 6,
   title: "Starting solids and movement",
   introduction:
-    "Month 6 can bring new tastes, stronger movement, growing curiosity, and more back-and-forth connection. This pack offers calm ideas to support the everyday moments already happening in your family.",
+    "Month 6 can bring new tastes, stronger movement, growing curiosity, and more back-and-forth connection. This pack keeps starting solids and movement positive, practical, and family-centred.",
   themes: [
     {
       title: "Growing through play",
       colour: "aqua",
       summary:
-        "Use floor time, reaching games, songs, and face-to-face play to support curiosity and shared attention.",
+        "Use floor time, reaching games, songs, and face-to-face play to support curiosity, shared attention, and joyful repetition.",
       ideas: [
         "Place a favourite toy just within comfortable reach.",
         "Copy sounds and expressions, then pause for a response.",
@@ -269,7 +269,7 @@ export const monthSixSupportPack: MonthlySupportPack = {
       title: "Feeding and new textures",
       colour: "sage",
       summary:
-        "Introduce suitable foods and textures at your child’s pace while keeping milk feeds central to their nutrition.",
+        "Explore suitable foods and textures at your child’s pace while keeping milk feeds central to their nutrition.",
       ideas: [
         "Choose a calm time when your child is alert and supported upright.",
         "Let touching, smelling, and exploring food be part of learning.",
@@ -280,7 +280,7 @@ export const monthSixSupportPack: MonthlySupportPack = {
       title: "Movement and strength",
       colour: "lime",
       summary:
-        "Everyday reaching, rolling, supported sitting, and floor play can help build strength and coordination.",
+        "Everyday reaching, rolling, supported sitting, and floor play can help build strength and coordination without turning movement into a test.",
       ideas: [
         "Give your child space to move freely on a safe floor surface.",
         "Place objects on both sides to invite turning and reaching.",
@@ -291,7 +291,7 @@ export const monthSixSupportPack: MonthlySupportPack = {
       title: "Sleep and rhythm",
       colour: "teal",
       summary:
-        "Sleep can continue to change as feeding, movement, and daily routines evolve.",
+        "Sleep can continue to change as feeding, movement, and daily routines evolve, so gentle rhythm matters more than perfect patterns.",
       ideas: [
         "Use a short, familiar wind-down routine.",
         "Notice patterns without expecting every day to look the same.",
@@ -471,4 +471,3 @@ export const monthSixKnowledgeItems: MonthlyContentItem[] = [
     lastReviewedAt: null,
   },
 ];
-

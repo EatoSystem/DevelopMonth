@@ -20,13 +20,13 @@ export default function MonthsPage() {
   return (
     <FoundationPageShell>
       <PageHero
-        body="You do not need all child-development information at once. You need calm, useful support for the month your child is in now."
+        body="You do not need every piece of child-development information at once. You need calm, useful support for the month your child is in now."
         eyebrow="DEVELOPMONTH YEAR ONE"
         primaryHref="/months/month-6"
         primaryLabel="Explore Month 6"
         secondaryHref="/prototype"
         secondaryLabel="Open the product prototype"
-        title="The right support for every month of your child’s development."
+        title="Year One support, month by month."
       />
       <PreviewOnlyNotice />
       <ProfessionalReviewStatus />
@@ -69,7 +69,7 @@ export default function MonthsPage() {
                     className={styles.monthCardLink}
                     href="/months/month-6"
                   >
-                    Explore the draft Month 6 pack →
+                    Explore the draft Month 6 support pack →
                   </Link>
                 ) : (
                   <small className={styles.monthCardLink}>
@@ -85,4 +85,3 @@ export default function MonthsPage() {
     </FoundationPageShell>
   );
 }
-

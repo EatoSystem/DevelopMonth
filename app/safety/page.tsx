@@ -18,13 +18,13 @@ export default function SafetyPage() {
   return (
     <FoundationPageShell>
       <PageHero
-        body="Trust starts with being clear about what DevelopMonth can support, what it cannot do, and when families should speak with a relevant professional."
+        body="DevelopMonth is designed to make support easier to understand while staying clear about its limits, its draft status, and when families should speak with a relevant professional."
         eyebrow="SAFETY BY DESIGN"
         primaryHref="/months/month-6"
         primaryLabel="See draft content status"
         secondaryHref="/"
         secondaryLabel="Return to the homepage"
-        title="Human support first. Clear boundaries always."
+        title="Clear boundaries. Calm support."
       />
       <PreviewOnlyNotice />
       <ProfessionalReviewStatus />
@@ -33,4 +33,3 @@ export default function SafetyPage() {
     </FoundationPageShell>
   );
 }
-

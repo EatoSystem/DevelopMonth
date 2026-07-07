@@ -6881,3 +6881,58 @@ select:focus-visible {
   outline: 3px solid var(--dm-teal-dark);
   outline-offset: 3px;
 }
+
+/* Product polish: keep the pre-MVP concept warm, clear, and visibly static. */
+
+.hero-intro {
+  max-width: 650px;
+}
+
+.hero-microcopy {
+  max-width: 560px;
+}
+
+.button:focus-visible,
+.site-header a:focus-visible,
+.site-footer a:focus-visible,
+.personalised-preview-action a:focus-visible {
+  outline: 3px solid rgba(68, 174, 177, 0.34);
+  outline-offset: 4px;
+}
+
+.month-support-pack > p,
+.membership-card > p {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.membership-card-heading span {
+  max-width: 240px;
+  line-height: 1.45;
+}
+
+.membership-card h3 {
+  max-width: 360px;
+}
+
+.personalised-support-note,
+.support-growth-note,
+.support-flags-note {
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.companion-panel {
+  box-shadow: 0 22px 70px rgba(31, 77, 77, 0.085);
+}
+
+@media (max-width: 760px) {
+  .membership-card-heading span {
+    max-width: 190px;
+  }
+
+  .month-support-pack > p,
+  .membership-card > p {
+    line-height: 1.5;
+  }
+}

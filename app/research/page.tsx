@@ -3,8 +3,10 @@ import {
   FoundationPageShell,
   PageHero,
   PreviewOnlyNotice,
+  ProfessionalReviewStatus,
   ResearchMission,
   SafetyBoundary,
+  SourceRegisterStatus,
 } from "@/components/foundation/MonthMapFoundation";
 
 export const metadata: Metadata = {
@@ -17,7 +19,7 @@ export default function ResearchPage() {
   return (
     <FoundationPageShell>
       <PageHero
-        body="DevelopMonth is being shaped through parent research, scoped professional review, source registers, and visible content governance."
+        body="DevelopMonth is being shaped through parent research, scoped professional review, source registers, and visible content governance. Content remains draft until reviewed."
         eyebrow="RESEARCH AND IMPACT"
         primaryHref="/months/month-6"
         primaryLabel="Review the Month 6 draft"
@@ -26,9 +28,10 @@ export default function ResearchPage() {
         title="Every stage deserves better support."
       />
       <PreviewOnlyNotice />
+      <ProfessionalReviewStatus />
+      <SourceRegisterStatus />
       <ResearchMission />
       <SafetyBoundary />
     </FoundationPageShell>
   );
 }
-

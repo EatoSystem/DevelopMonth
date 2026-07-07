@@ -121,18 +121,18 @@ export function Hero() {
         <div className="hero-copy">
           <p className="eyebrow eyebrow-rule">DEVELOPMONTH</p>
           <h1>
-            Child development support,
+            Child development and parenting,
             <br />
             month by month.
           </h1>
           <p className="hero-intro">
-            DevelopMonth helps parents support their child&apos;s growth with
-            monthly development packs, practical ideas, gentle check-ins, saved
-            questions, and Aion — your future child-development companion.
+            DevelopMonth gives parents calm monthly support packs for growth,
+            play, bonding, feeding, sleep, movement, communication, and family
+            confidence — with future Aion support that stays parent-controlled.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/prototype">
-              Explore Month 6 Preview <span aria-hidden="true">↗</span>
+              Explore Month 6 preview <span aria-hidden="true">↗</span>
             </Link>
             <a className="button button-text" href="#waitlist">
               Join the Founding Families <span aria-hidden="true">↓</span>
@@ -208,8 +208,8 @@ export function SupportPack() {
           <p>
             Each month brings together positive development guidance, play and
             bonding ideas, feeding and sleep support, parent-friendly
-            check-ins, and questions to ask when professional guidance may
-            help.
+            check-ins, and calm questions to keep together if professional
+            guidance would help.
           </p>
           <div className="assessment-domain-list" aria-label="Development areas">
             {supportAreas.map((area) => (
@@ -223,7 +223,7 @@ export function SupportPack() {
             <small>DRAFT EXAMPLE · REVIEW REQUIRED</small>
           </div>
           <h3>Starting solids and movement</h3>
-          <p>This month&apos;s support</p>
+          <p>Warm, practical support</p>
           <div className="month-support-pack-list">
             {monthlySupport.map((item, index) => (
               <span key={item}>
@@ -403,7 +403,7 @@ export function PersonalisedSupport() {
         <SectionHeader
           eyebrow="PERSONALISED SUPPORT"
           title="Personalised around your child."
-          body="The proposed product would use only the journal, calendar, monthly check-ins, and support goals a parent chooses to add. This parent-controlled information could make future guidance more relevant to each child and family."
+          body="In the future, DevelopMonth would use only the journal, calendar, monthly check-ins, and support goals a parent chooses to add. That parent-controlled information could make monthly guidance feel more relevant to each child and family."
         />
         <div className="personalised-support-grid">
           {personalisedSupportFeatures.map((feature) => (
@@ -428,10 +428,11 @@ export function PersonalisedSupport() {
               Parent-controlled <span aria-hidden="true">·</span> You choose
               what to add
             </p>
-            <h3>Aion is your calm child-development companion, month by month.</h3>
+            <h3>Aion is a future, parent-controlled child-development companion.</h3>
             <p>
-              A future support layer designed to explain this month, organise
-              parent-chosen information, and complement professional guidance.
+              A calm support layer concept designed to explain this month,
+              organise parent-chosen information, and complement professional
+              guidance.
             </p>
           </div>
           <div className="companion-capabilities">
@@ -698,9 +699,9 @@ export function FoundingMembership() {
           <p className="eyebrow">FOUNDING MEMBERSHIP PREVIEW</p>
           <h2>Become a founding family.</h2>
           <p>
-            Founding families help shape DevelopMonth from the beginning —
-            supporting Year One development packs, personalised family
-            guidance, research updates, and the wider PregMonth → DevelopMonth
+            Founding families would help shape DevelopMonth from the beginning:
+            the Year One support packs, parent research, professional review,
+            future Aion concepts, and the wider PregMonth → DevelopMonth
             journey.
           </p>
           <small>
@@ -712,13 +713,13 @@ export function FoundingMembership() {
         </div>
         <div className="membership-card">
           <div className="membership-card-heading">
-            <span>FOUNDING FAMILY MEMBERSHIP</span>
+            <span>FOUNDING FAMILY MISSION</span>
             <i>01</i>
           </div>
           <strong>€50</strong>
-          <p>per month for the first 12 months</p>
+          <p>proposed monthly contribution for the first 12 months</p>
           <div className="membership-divider" />
-          <h3>Your founding access includes:</h3>
+          <h3>Founding families may help shape:</h3>
           <div className="membership-tiers">
             {membershipBenefits.map(([number, label]) => (
               <p key={label}>
@@ -760,9 +761,9 @@ export function WaitlistSection() {
           </p>
           <div className="waitlist-points">
             <p><span aria-hidden="true">✓</span> Monthly support packs</p>
-            <p><span aria-hidden="true">✓</span> Personalised family support</p>
-            <p><span aria-hidden="true">✓</span> Research updates</p>
-            <p><span aria-hidden="true">✓</span> DevelopMonth early access</p>
+            <p><span aria-hidden="true">✓</span> Future personalisation concepts</p>
+            <p><span aria-hidden="true">✓</span> Research and review updates</p>
+            <p><span aria-hidden="true">✓</span> Early prototype feedback</p>
           </div>
         </div>
         <WaitlistForm />

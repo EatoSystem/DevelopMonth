@@ -174,8 +174,8 @@ function ThisMonthView() {
             <span>Connection</span>
           </div>
           <div className={styles.monthHeroActions}>
-            <Link href="/prototype/check-in">Start check-in</Link>
-            <Link href="/prototype/journal">Add journal note</Link>
+            <Link href="/prototype/check-in">Preview check-in</Link>
+            <Link href="/prototype/journal">Preview journal</Link>
           </div>
           <p className={styles.monthHeroPreviewNote}>
             This is a static concept. Nothing entered here is saved or sent
@@ -233,25 +233,25 @@ function ThisMonthView() {
             <span>01</span>
             <h3>Journal</h3>
             <p>2 small wins captured this month.</p>
-            <strong>Add a note →</strong>
+            <strong>Preview journal →</strong>
           </Link>
           <Link href="/prototype/calendar" className={styles.quickCard}>
             <span>02</span>
             <h3>Calendar</h3>
             <p>Next family reminder: 12 July.</p>
-            <strong>View reminders →</strong>
+            <strong>Preview reminders →</strong>
           </Link>
           <Link href="/prototype/check-in" className={styles.quickCard}>
             <span>03</span>
             <h3>Check-in</h3>
             <p>A short monthly reflection, never a test.</p>
-            <strong>Start check-in →</strong>
+            <strong>Preview check-in →</strong>
           </Link>
           <Link href="/prototype/support-pack" className={styles.quickCard}>
             <span>04</span>
             <h3>Support pack</h3>
             <p>Six warm, practical ideas for Month 6.</p>
-            <strong>Explore support →</strong>
+            <strong>Preview support →</strong>
           </Link>
         </div>
       </section>
@@ -291,7 +291,7 @@ function ThisMonthView() {
           </div>
           <div className={styles.questionsAction}>
             <button type="button" disabled>
-              Save to questions
+              Save disabled in preview
             </button>
             <span>Preview only — nothing is saved.</span>
           </div>
@@ -335,7 +335,7 @@ function JournalView() {
             <span>Question</span>
           </div>
           <button disabled type="button">
-            Save note
+            Save disabled in preview
           </button>
           <small>Disabled in this static concept. No information is saved.</small>
         </section>
@@ -435,7 +435,7 @@ function CheckInView() {
             return later.
           </p>
           <button disabled type="button">
-            Begin reflection
+            Reflection disabled in preview
           </button>
         </div>
       </section>
@@ -513,9 +513,10 @@ function CompanionView() {
             </span>
           </div>
           <p>
-            Your journal notes celebrate reaching during floor play and growing
-            interest in food. This month’s pack could prioritise movement,
-            playful connection, and relaxed texture exploration.
+            In this fictional example, the notes celebrate reaching during
+            floor play and growing interest in food. This month’s pack could
+            prioritise movement, playful connection, and relaxed texture
+            exploration.
           </p>
           <div className={styles.companionSuggestions}>
             <span>Try: a reaching game on both sides</span>
@@ -623,7 +624,7 @@ export function PrototypeShell({ view }: PrototypeShellProps) {
           <ChildProfile />
           <PrototypeNavigation view={view} />
           <div className={styles.sidebarNote}>
-            <strong>Private by design</strong>
+            <strong>Static preview</strong>
             <p>
               This concept uses fictional example content. No account exists
               and nothing is stored.

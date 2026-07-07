@@ -32,7 +32,7 @@ export function FoundationPageShell({
           <GrowthMapIcon className={styles.brandIcon} />
           <span>
             <strong>DevelopMonth</strong>
-            <small>Child development, month by month</small>
+            <small>Child development and parenting, month by month.</small>
           </span>
         </Link>
         <nav aria-label="DevelopMonth product navigation">
@@ -50,7 +50,7 @@ export function FoundationPageShell({
       <footer className={styles.footer}>
         <div>
           <strong>DevelopMonth</strong>
-          <span>The right support for this month.</span>
+          <span>Child development and parenting, month by month.</span>
         </div>
         <p>
           DevelopMonth provides educational and organisational support only. It
@@ -173,7 +173,7 @@ export function MonthlyKnowledgeGrid({
     <section className={styles.section} aria-labelledby="knowledge-title">
       <div className={styles.sectionHeading}>
         <p className={styles.eyebrow}>MONTHLY KNOWLEDGE</p>
-        <h2 id="knowledge-title">Support for the month you are in.</h2>
+        <h2 id="knowledge-title">Positive support for the month you are in.</h2>
         <p>
           Calm, stage-aware information organised around everyday family life.
           Every item remains draft content until sourced and reviewed.
@@ -304,14 +304,15 @@ export function CompanionCard({
         <div>
           <p className={styles.eyebrow}>MEET AION · PRONOUNCED EYE-ON</p>
           <h2 id="aion-title">Your calm child-development companion.</h2>
-          <strong>AI inside, humanity first.</strong>
+          <strong>Parent-controlled. Future concept only.</strong>
         </div>
       </div>
       <div className={styles.companionBody}>
         <p>
           Aion is a future companion concept designed to explain the month you
           are in, organise parent-chosen information, and prepare useful
-          questions from professionally reviewed content when available.
+          questions from professionally reviewed content when available. It is
+          not a chatbot replacing human judgement or professional guidance.
         </p>
         <div className={styles.exampleQuestions}>
           <span>Ask about this month</span>
@@ -372,9 +373,9 @@ export function FoundingFamilyMembership() {
         <PreviewOnlyNotice />
       </div>
       <article>
-        <span>FOUNDING PRICE IDEA</span>
+        <span>FOUNDING CONTRIBUTION IDEA</span>
         <strong>€50</strong>
-        <p>per month for the first 12 months</p>
+        <p>proposed monthly contribution for the first 12 months</p>
         <ul>
           {benefits.map((benefit) => (
             <li key={benefit}>{benefit}</li>
@@ -402,11 +403,17 @@ export function ResearchMission() {
           pregnancy, child development, maternal wellbeing, family support, and
           additional-needs research.
         </p>
+        <p>
+          No monthly content should be treated as parent-ready until its source
+          register, jurisdiction, and professional review status are complete.
+        </p>
         <div>
           <span>Child development</span>
           <span>Parent and family support</span>
           <span>Additional needs</span>
           <span>Maternal wellbeing</span>
+          <span>Professional review</span>
+          <span>Source registers</span>
         </div>
       </div>
     </section>
