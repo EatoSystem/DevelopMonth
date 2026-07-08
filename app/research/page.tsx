@@ -21,8 +21,8 @@ export default function ResearchPage() {
       <PageHero
         body="DevelopMonth is being shaped through parent research, scoped professional review, source registers, and visible content governance. Content remains draft until reviewed."
         eyebrow="RESEARCH AND IMPACT"
-        primaryHref="/months/month-6"
-        primaryLabel="Review the Month 6 draft"
+        primaryHref="/validation/month-6"
+        primaryLabel="Open the Month 6 validation pack"
         secondaryHref="/safety"
         secondaryLabel="Read the safety boundaries"
         title="Every stage deserves better support."

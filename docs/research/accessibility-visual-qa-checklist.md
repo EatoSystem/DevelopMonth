@@ -93,7 +93,7 @@ For each route:
 - [ ] Check-ins feel reflective, not scored or evaluative.
 - [ ] No wording promises an outcome.
 - [ ] No wording implies diagnosis, treatment, or automated assessment.
-- [ ] Companion language is conditional and clearly conceptual.
+- [ ] Aion language is conditional and clearly conceptual.
 - [ ] Parent control and optionality are explicit.
 - [ ] Signposting is calm and does not create false reassurance.
 - [ ] Draft content is not presented for parent reliance.
@@ -121,4 +121,3 @@ Do not mark visual/accessibility QA complete until:
 - Small-screen and 200% zoom layouts are usable.
 - Contrast has been measured.
 - Fixes have been retested on the affected environments.
-

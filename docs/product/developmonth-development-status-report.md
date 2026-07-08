@@ -16,8 +16,8 @@ The strongest strategic decision has been to define DevelopMonth as positive
 family-development support rather than a milestone tracker, clinical
 assessment tool, or problem-finding service. The product concept is coherent:
 monthly support packs are supported by an optional journal, calendar,
-reflection-style check-ins, parent-prepared questions, summaries, and a
-parent-controlled Companion.
+reflection-style check-ins, parent-prepared questions, summaries, and
+parent-controlled Aion support.
 
 However, DevelopMonth is not yet a functioning MVP and should not be described
 as one. The current product does not have accounts, persistent data,
@@ -91,7 +91,7 @@ The current GrowthMap icon has been synchronised across:
 - Header and footer
 - Hero
 - Month 12
-- Personalised-support and Companion sections
+- Personalised-support and Aion sections
 - PregMonth bridge
 - Research section
 - Password gate
@@ -108,7 +108,7 @@ The password-gated `/prototype` journey contains seven views:
 3. **Calendar** — family reminders and appointments
 4. **Check-in** — reflection rather than scoring
 5. **Support Pack** — the full Month 6 content structure
-6. **Companion** — a static parent-controlled personalisation concept
+6. **Aion** — a static parent-controlled personalisation concept
 7. **Summary** — a warm monthly record rather than an assessment
 
 The prototype uses fictional content, is marked as static, saves nothing, and
@@ -200,9 +200,9 @@ subject feel manageable.
 The product language consistently says that parents choose what to add. That
 principle should remain architectural, not merely editorial.
 
-### 5.4 The Companion is framed cautiously
+### 5.4 Aion is framed cautiously
 
-The Companion is currently an organisational concept rather than an
+Aion is currently an organisational concept rather than an
 all-knowing agent. This is the right direction. Its value should come from
 summarising, organising, and preparing questions—not inferring diagnoses.
 
@@ -222,7 +222,7 @@ Until research occurs, the team does not know:
 
 - Whether parents understand the product
 - Whether check-ins feel supportive or evaluative
-- Whether the Companion feels useful or intrusive
+- Whether Aion feels useful or intrusive
 - Which feature creates repeat monthly value
 - Whether the language unintentionally creates anxiety
 - Whether professionals consider the boundaries and signposting safe
@@ -348,7 +348,7 @@ Include:
 
 Exclude initially:
 
-- Generative Companion
+- Generative Aion
 - Automated signposting based on free text
 - Payments
 - Professional messaging
@@ -359,9 +359,9 @@ Exclude initially:
 Month 6 should be the pilot content unit. A small, excellent, reviewed pilot is
 safer and more informative than twelve shallow packs.
 
-### 7.3 Companion evolution
+### 7.3 Aion evolution
 
-The Companion should evolve in stages:
+Aion should evolve in stages:
 
 ### Stage A — deterministic organisation
 
@@ -385,7 +385,7 @@ Only after a formal safety/evaluation programme:
 - Prepare questions
 - Gently highlight content a parent may wish to review
 
-The Companion should never silently infer a diagnosis, determine whether a
+Aion should never silently infer a diagnosis, determine whether a
 child is “normal”, or generate unsourced clinical instructions.
 
 ### 7.4 Content evolution
@@ -524,7 +524,7 @@ Better measures are:
 - No unauthorised access
 - High accessibility
 - Low error rate
-- Transparent content and Companion provenance
+- Transparent content and Aion provenance
 
 ## 10. Immediate recommended actions
 

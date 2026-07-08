@@ -12,11 +12,16 @@ already happened.
 
 Use this plan with:
 
+- `docs/validation/month-06-validation-pack.md`
+- `docs/content/developmonth-content-standard.md`
+- `docs/research/parent-research-session-script.md`
+- `docs/research/professional-review-pack.md`
 - `docs/research/recruitment-and-consent-pack.md`
 - `docs/research/findings-register.md`
 - `docs/research/accessibility-visual-qa-checklist.md`
 - `docs/governance/month-06-approval-record.md`
 - `docs/content/month-06-source-register.md`
+- The public `/validation/month-6` hub
 - The password-gated `/prototype` journey
 
 Before each session, record the deployed commit and confirm that the visible
@@ -27,13 +32,23 @@ feedback only.
 
 1. Can parents explain DevelopMonth in their own words after seeing This Month?
 2. Does the product feel supportive rather than evaluative?
-3. Can parents find Journal, Calendar, Check-in, Support Pack, Companion, and
+3. Can parents find Journal, Calendar, Check-in, Support Pack, Aion, and
    Summary?
 4. Do parents understand that adding information is optional?
-5. Does the Companion feel parent-controlled rather than intrusive?
+5. Does Aion feel parent-controlled rather than intrusive?
 6. Is the boundary between education and professional care clear?
 7. Do professionals see unsafe claims, omissions, or ambiguous signposting?
 8. Which part would families return to each month?
+
+## Month 6 validation focus
+
+Month 6 is the proof month. The research goal is not to validate every month of
+Year One at once. It is to determine whether one focused support pack can feel
+useful, warm, parent-controlled, professionally bounded, and credible enough to
+justify later infrastructure planning.
+
+Do not move to account, database, analytics, payments, real Aion, or child-data
+storage planning until the exit criteria in this document are met.
 
 ## Suggested participants
 
@@ -89,7 +104,7 @@ intentionally disabled.”
 4. Find the next appointment.
 5. Preview the monthly check-in. Explain how it makes you feel.
 6. Open the full support pack and choose the most useful section.
-7. Review the Companion example. Tell us what information it used.
+7. Review the Aion example. Tell us what information it used.
 8. Find how to stop or limit personalisation.
 9. Open the monthly summary. Explain what it is—and what it is not.
 10. Find the safety boundary and explain when you would contact a professional.
@@ -110,7 +125,7 @@ intentionally disabled.”
 3. Mark claims needing evidence, qualification, localisation, or removal.
 4. Review the three-level signposting model.
 5. Identify risks of false reassurance and unnecessary anxiety.
-6. Review the Companion example for unsafe inference.
+6. Review the Aion example for unsafe inference.
 7. Review the monthly summary boundary.
 8. List authoritative sources and expected review frequency.
 9. Identify content outside the reviewer’s scope.
@@ -128,7 +143,7 @@ Score 1–5 and record evidence:
 | Navigation | Completes 8/10 tasks without moderator rescue |
 | Emotional safety | Describes experience as calm/supportive, not testing |
 | Parent control | Understands what is optional and what information is used |
-| Companion boundary | Does not interpret output as diagnosis or surveillance |
+| Aion boundary | Does not interpret output as diagnosis or surveillance |
 | Professional boundary | Knows when and how to seek professional guidance |
 | Return value | Identifies at least one monthly reason to return |
 | Mobile readability | Completes core tasks comfortably on a phone |

@@ -113,7 +113,7 @@ Urgent-care content must:
 - Make uncertainty explicit
 - Be maintained separately from general monthly content
 
-## 6. Personalisation and Companion rules
+## 6. Personalisation and Aion rules
 
 The parent must know:
 
@@ -123,7 +123,7 @@ The parent must know:
 - How to exclude a source
 - How to correct, delete, export, or stop personalisation
 
-The Companion must:
+Aion must:
 
 - Use only information the parent deliberately supplies or selects
 - Prefer summaries and organisation over inference
@@ -179,6 +179,5 @@ When potentially harmful or incorrect content is reported:
 - Content governance operating with named owners
 - Professional-review network established
 - Incident response tested
-- Companion evaluation plan approved
+- Aion evaluation plan approved
 - Accessibility review completed
-

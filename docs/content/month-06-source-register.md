@@ -23,6 +23,19 @@ relevant professional scope.
 | Last source review | Not completed |
 | Next source review | Required before parent-facing release |
 
+## Validation alignment
+
+This register is part of the Month 6 validation pack:
+
+- `docs/validation/month-06-validation-pack.md`
+- `docs/content/developmonth-content-standard.md`
+- `docs/research/professional-review-pack.md`
+- `docs/governance/month-06-approval-record.md`
+
+No source entry should be treated as approval unless a scoped reviewer has
+recorded the supported claim IDs, jurisdiction, limitations, decision, and next
+review date.
+
 ## Claim and source inventory
 
 | ID | Topic/claim area | Current prototype use | Required source type | Jurisdiction | Reviewer scope | Source | Status |
@@ -85,4 +98,5 @@ Month 6 remains **Draft—Not for parent reliance** until:
   communication, and urgent signposting are reviewed within scope.
 - The source register and content version match.
 - Review dates and named owners are assigned.
-
+- Parent research findings and professional review decisions have no unresolved
+  critical or high-risk items.

@@ -40,6 +40,7 @@ export function FoundationPageShell({
           <Link href="/aion">Meet Aion</Link>
           <Link href="/membership">Membership</Link>
           <Link href="/research">Research</Link>
+          <Link href="/validation/month-6">Validation</Link>
           <Link href="/safety">Safety</Link>
           <Link className={styles.headerCta} href="/prototype">
             Month 6 prototype

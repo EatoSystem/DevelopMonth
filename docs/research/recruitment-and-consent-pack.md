@@ -11,7 +11,7 @@ Subject: Help shape DevelopMonth’s Month 6 parent-support prototype
 DevelopMonth is creating positive child-development and parenting support,
 month by month. We are inviting parents and primary carers to test a static
 Month 6 concept covering monthly guidance, a journal, calendar, check-in,
-support pack, Companion, and family summary.
+support pack, Aion concept, and family summary.
 
 The session lasts approximately 45 minutes. We are testing the product—not you
 or your child. The prototype uses a fictional child profile, stores nothing,
@@ -97,4 +97,3 @@ Collect only:
 
 Do not place names, contact details, child names, health information, or
 identifiable recordings in the product backlog.
-

@@ -51,7 +51,7 @@ sleep, and family support. Questions may be skipped. Answers are not scores.
 Positive month-specific guidance covering development, play, bonding,
 movement, communication, feeding, sleep, parent confidence, and questions.
 
-### DevelopMonthCompanion
+### Aion
 
 A parent-controlled organisational layer that may summarise information a
 parent chooses to provide. It must distinguish parent notes, published
@@ -77,7 +77,7 @@ decisions.
 4. Parent opens **Calendar** and sees family reminders alongside an appointment.
 5. Parent previews a five-area **Check-in** framed as reflection, not a test.
 6. Parent explores the full **Support Pack**.
-7. Parent sees how the **Companion** could organise only selected information.
+7. Parent sees how **Aion** could organise only selected information.
 8. Parent previews a warm **Monthly Summary**.
 
 ## Content hierarchy
@@ -114,4 +114,3 @@ Not in the static prototype:
 5. Decide the minimum data needed for each product outcome.
 6. Prototype deletion, export, consent, and personalisation controls.
 7. Only then select authentication, database, hosting, and automation services.
-
