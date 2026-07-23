@@ -863,6 +863,7 @@
 @media (max-width: 700px) {
   .header {
     min-height: 74px;
+    gap: 12px;
     padding: 8px 18px;
   }
 
