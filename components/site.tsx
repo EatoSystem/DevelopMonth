@@ -81,6 +81,20 @@ export function Header() {
             Month 6 preview <span aria-hidden="true">↗</span>
           </Link>
         </nav>
+        <details className="home-mobile-nav">
+          <summary>Menu</summary>
+          <div>
+            <a href="#vision">Vision</a>
+            <Link href="/months">Year One</Link>
+            <Link href="/aion">Aion</Link>
+            <a href="#support-blocks">Support packs</a>
+            <a href="#foundation">PregMonth bridge</a>
+            <Link href="/membership">Membership</Link>
+            <Link href="/research">Research</Link>
+            <Link href="/safety">Safety</Link>
+            <Link href="/prototype">Month 6 prototype</Link>
+          </div>
+        </details>
       </div>
     </header>
   );

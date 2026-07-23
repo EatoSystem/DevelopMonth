@@ -2,113 +2,178 @@
 
 ## Starting solids and movement
 
-Month 6 can bring new tastes, stronger movement, growing curiosity, and more
-back-and-forth connection. This pack offers calm ideas to support the everyday
-moments already happening in your family.
+**Status: Ireland-first Draft 0.2 for research and scoped professional review.
+Not approved for parent reliance.**
 
-This content is a product-development draft. Feeding, allergen, choking,
-safer-sleep, and urgent-care content requires review against current local
-guidance before publication.
+Around Month 6, many families begin exploring solid foods while movement,
+sounds, play, and connection keep growing. Every child develops differently.
+This pack is calm educational support, not a timetable, scorecard, or
+developmental assessment.
 
-## 1. Growing through play
+## What may be growing this month
 
-Floor time, reaching games, songs, and face-to-face play can support curiosity,
-shared attention, and connection.
+Your child may be exploring:
 
-Try:
+- new tastes, textures, and the experience of eating;
+- reaching, rolling, turning, floor play, or supported sitting;
+- sounds, faces, expressions, and back-and-forth interaction;
+- familiar routines, shared delight, and stronger curiosity.
 
-- Place a favourite toy just within comfortable reach.
-- Copy sounds and expressions, then pause for a response.
-- Offer supervised floor play in short, enjoyable bursts.
-- Follow your child’s interest rather than trying to complete an exercise.
+These are possibilities, not a checklist. Ages in development guidance are
+averages. What matters here is noticing the child in front of you without
+pressure.
 
-Celebrate:
+Claims: M6-01, M6-08, M6-09, M6-10, M6-11.
 
-- Enjoyment, effort, curiosity, eye contact, sounds, gestures, and shared
-  laughter.
+## Practical ideas
 
-## 2. Feeding and new textures
+### 1. Starting solids, calmly
 
-Introducing suitable foods is a gradual learning experience. Touching,
-smelling, tasting, and refusing can all be part of exploration.
+Around 6 months, look for signs that your child is ready and begin at their
+pace. Breast milk or first infant formula continues while suitable foods and
+textures are introduced.
 
-Try:
+You might:
 
-- Choose a calm time when your child is alert and supported upright.
-- Let touching and exploring food be part of learning.
-- Introduce tastes and textures at your child’s pace.
-- Keep the experience responsive rather than outcome-focused.
+- choose a calm time when your child is alert, supported upright, and
+  supervised;
+- let touching, smelling, and tasting be part of learning;
+- stop when your child shows they have had enough rather than forcing a
+  mouthful;
+- include suitable iron-rich foods;
+- speak with your GP or public health nurse if you are unsure about readiness.
 
-Professional review required:
+Claims: M6-01, M6-02, M6-03, M6-04, M6-07.
 
-- Current milk-feeding guidance
-- Readiness for complementary feeding
-- Allergen introduction
-- Choking prevention and food preparation
-- Individual feeding, growth, allergy, or medical concerns
+Sources: HSE-WEAN-START-2025, HSE-WEAN-HOW-2025,
+HSE-WEAN-NUTRIENTS-2025, HSE-BABY-CUES-2026.
 
-## 3. Movement and strength
+### 2. Allergens and safer eating
 
-Everyday reaching, rolling, supported sitting, and floor play can help build
-strength and coordination.
+Follow current Irish guidance when introducing common allergens. Food
+preparation, texture, shape, seating, and supervision matter whenever a young
+child eats.
 
-Try:
+You might:
 
-- Give your child space to move freely on a safe floor surface.
-- Place interesting objects on both sides to invite turning and reaching.
-- Change position when your child shows tiredness or frustration.
-- Keep movement playful rather than treating it as a milestone test.
+- read the current HSE allergen guidance before introducing common allergens;
+- ask a GP or appropriate health professional for individual guidance if your
+  child has eczema, a known allergy, or another health concern;
+- prepare food in an age-appropriate shape and texture;
+- stay with your child and keep them appropriately supported while eating.
 
-## 4. Sleep and rhythm
+This section requires paediatric-dietetic, allergy, feeding, and child-safety
+review. The registered HSE choking page is beyond its stated review date and
+must be verified before approval.
 
-Sleep can continue to change as feeding, movement, and daily routines evolve.
-A familiar rhythm may help, while day-to-day variation remains normal for many
-families.
+Claims: M6-05, M6-06, M6-07.
 
-Try:
+Sources: HSE-FOOD-ALLERGY-2023, HSE-CHOKING-2022,
+HSE-CHILD-SAFETY-MANUAL-2026.
 
-- Use a short and familiar wind-down routine.
-- Notice patterns without expecting every day to look the same.
-- Share the care where possible.
-- Follow current safer-sleep guidance for every sleep.
+### 3. Movement through play
 
-## 5. Bonding and parent confidence
+Awake, supervised floor and tummy play can create enjoyable opportunities for
+reaching, rolling, turning, and supported sitting.
 
-Warm responses, shared delight, and familiar routines support connection while
-helping parents discover what works for their family.
+You might:
 
-Try:
+- use a firm, clear floor surface while your child is awake and supervised;
+- place an interesting object on either side to invite turning and reaching;
+- copy expressions or add a song while you play;
+- pause when your child has had enough and return later.
 
-- Name what your child is looking at or reaching towards.
-- Celebrate effort and connection rather than outcomes.
-- Build playful moments into routines already happening.
-- Ask partners, family members, or carers for practical support.
+Comfort and connection matter more than how long an activity lasts.
 
-## 6. Questions to ask
+Claims: M6-08, M6-09.
 
-Parents may wish to save questions such as:
+Sources: HSE-TUMMY-TIME-2026, HSE-MILESTONES-0-6-2025.
 
-- What textures and foods are suitable to try next?
-- How should we introduce common allergens safely?
-- How can we support movement comfortably during everyday play?
-- What safer-sleep guidance applies as movement changes?
-- Is there anything in feeding, sleep, movement, or communication we should
-  discuss?
+### 4. Sounds, faces, and connection
 
-## Gentle signposting
+Face-to-face talk, copied sounds, shared attention, and pauses for response can
+support communication and bonding in ordinary family moments.
 
-Most of this pack supports positive everyday development. Parents should seek
-professional advice when they are worried, when feeding or growth is difficult,
-when their child appears unwell, or when something changes or persists in a way
-that concerns them. Loss of previously acquired skills or severe or sudden
-symptoms requires timely professional guidance.
+You might:
 
-DevelopMonth should link to reviewed local sources rather than reproducing
-complex clinical instructions.
+- follow what your child is looking at and put simple words around it;
+- copy a sound or expression, then leave room for a response;
+- sing, talk, and name what is happening during familiar routines;
+- use the language that feels most natural in your family.
 
-## Safety statement
+Claims: M6-10, M6-11.
 
-DevelopMonth provides educational and supportive information only and does not
-replace professional medical advice, diagnosis, developmental assessment, or
-treatment.
+Sources: HSE-COMMUNICATION-0-12-2023, HSE-BABY-CUES-2026,
+HSE-BRAIN-DEVELOPMENT-2025.
 
+### 5. Sleep and family rhythm
+
+Sleep patterns vary and can change as feeding, movement, and daily life change.
+A familiar wind-down may support family rhythm without promising a perfect
+routine.
+
+You might:
+
+- use a short, familiar sequence before sleep where that works for your
+  family;
+- notice patterns without expecting every day or night to look the same;
+- share care and ask for practical support where possible;
+- follow current Irish safer-sleep guidance for every sleep.
+
+Ask your GP or public health nurse if sleep is affecting your child's wellbeing
+or your ability to cope.
+
+Claims: M6-12, M6-13.
+
+Sources: HSE-SLEEP-6M-2Y-2026, HSE-CHILD-SAFETY-MANUAL-2026,
+HSE-BRAIN-DEVELOPMENT-2025.
+
+## Questions you may want to save
+
+- What signs of readiness should we look for?
+- Which textures, allergens, and iron-rich foods should we discuss?
+- How can we make supervised floor play comfortable?
+- Is there anything about feeding, movement, communication, or sleep that we
+  should mention?
+- Which current HSE guidance is most relevant to our family?
+
+Saving a question is not the same as flagging a problem. It can simply help
+you make the most of a conversation with your GP, public health nurse,
+paediatrician, dietitian, therapist, or care team.
+
+## When professional guidance may help
+
+Contact your GP or public health nurse when:
+
+- you are unsure whether your child is ready to begin complementary feeding;
+- feeding, allergens, growth, movement, communication, or sleep worries you;
+- you need advice tailored to your child's health or circumstances;
+- your child loses a skill they previously had.
+
+If your child appears seriously unwell, trust your instincts and seek urgent
+medical help. Call **112 or 999** for a life-threatening emergency.
+
+Claims: M6-13, M6-14.
+
+Sources: HSE-MILESTONES-0-6-2025, HSE-URGENT-CHILD-2023,
+HSE-BRAIN-DEVELOPMENT-2025.
+
+## Official Ireland sources
+
+Use the source register for claim-level status and freshness notes:
+`docs/content/month-06-source-register.md`.
+
+Parent-facing starting points:
+
+- [HSE: When to start weaning](https://www2.hse.ie/babies-children/weaning-eating/weaning/when-to-start/)
+- [HSE: How to start weaning](https://www2.hse.ie/babies-children/weaning-eating/weaning/how-to-start/)
+- [HSE: Food allergies and children](https://www2.hse.ie/babies-children/weaning-eating/allergies-fussy-eating/food-allergies/)
+- [HSE: Tummy time for babies](https://www2.hse.ie/babies-children/parenting-advice/caring-for-a-new-baby/tummy-time/)
+- [HSE: Developmental milestones from 0 to 6 months](https://www2.hse.ie/babies-children/checks-milestones/developmental-milestones/0-6-months/)
+
+## Safety boundary
+
+DevelopMonth provides educational support only. This draft has not been
+professionally approved and should not be used for parent reliance. It does
+not replace advice from a GP, public health nurse, paediatrician, dietitian,
+therapist, emergency service, or local healthcare provider.

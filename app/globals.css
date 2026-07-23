@@ -44,6 +44,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: clip;
   background: #ffffff;
   color: var(--pm-teal-dark);
   font-family: var(--font-body);
@@ -326,6 +327,52 @@ a {
 .header-cta:focus-visible {
   background: var(--pm-teal-dark);
   color: #ffffff;
+}
+
+.home-mobile-nav {
+  position: relative;
+  display: none;
+}
+
+.home-mobile-nav summary {
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid var(--pm-teal-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 40px;
+  list-style: none;
+}
+
+.home-mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-mobile-nav > div {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  display: grid;
+  width: 220px;
+  padding: 12px;
+  border: 1px solid rgba(31, 77, 77, 0.12);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 22px 60px rgba(31, 77, 77, 0.16);
+}
+
+.home-mobile-nav a {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--pm-line);
+  color: var(--pm-teal-dark);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.home-mobile-nav a:last-child {
+  border-bottom: 0;
 }
 
 /* Hero */
@@ -1608,9 +1655,17 @@ a {
 
 .waitlist-shell {
   display: grid;
+  min-width: 0;
   align-items: center;
   grid-template-columns: minmax(0, 0.88fr) minmax(520px, 1.12fr);
   gap: 90px;
+}
+
+.waitlist-shell > *,
+.waitlist-form,
+.form-grid,
+.field {
+  min-width: 0;
 }
 
 .waitlist-copy h2 {
@@ -2194,6 +2249,10 @@ a {
     display: none;
   }
 
+  .home-mobile-nav {
+    display: block;
+  }
+
   .hero-layout,
   .promise-layout,
   .trust-layout,
@@ -2352,6 +2411,16 @@ a {
     min-height: 39px;
     padding-inline: 13px;
     font-size: 10px !important;
+  }
+
+  .site-header nav {
+    display: none;
+  }
+
+  .home-mobile-nav summary {
+    min-height: 39px;
+    padding-inline: 13px;
+    line-height: 37px;
   }
 
   .section-heading {
@@ -5676,6 +5745,10 @@ a {
   .hero-brand-labels {
     margin-top: -132px;
   }
+
+  .research-mission-icon {
+    width: min(350px, 100%);
+  }
 }
 
 @media (max-width: 940px) {
@@ -6834,6 +6907,11 @@ a {
     padding: 50px 22px 24px;
     border-radius: 34px;
     gap: 42px;
+  }
+
+  .waitlist-copy h2 {
+    font-size: clamp(38px, 12vw, 45px);
+    overflow-wrap: anywhere;
   }
 
   .waitlist-form,

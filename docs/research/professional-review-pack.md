@@ -1,13 +1,13 @@
 # Month 6 professional review pack
 
-Status: draft review pack. Use with scoped professionals only. Participation
-does not imply endorsement of DevelopMonth as a whole.
+Status: Ireland-first Draft 0.2 review pack. Use with scoped professionals
+only. Participation does not imply endorsement of DevelopMonth as a whole.
 
 ## Review purpose
 
 Review the Month 6 prototype and support-pack content for safety, accuracy,
-scope, source needs, jurisdiction, parent-facing clarity, and professional
-boundaries.
+scope, source suitability, Irish jurisdiction, parent-facing clarity, and
+professional boundaries.
 
 Month 6 is currently draft content for research. It is not approved for parent
 reliance.
@@ -41,6 +41,7 @@ One reviewer should not approve content outside their professional scope.
 - `/prototype/summary`
 - `docs/content/month-06-support-pack.md`
 - `docs/content/month-06-source-register.md`
+- `docs/research/month-06-professional-review-matrix.md`
 - `docs/governance/month-06-approval-record.md`
 - `docs/content/developmonth-content-standard.md`
 
@@ -59,12 +60,18 @@ One reviewer should not approve content outside their professional scope.
 
 For each claim within your scope:
 
+- use its M6 claim ID and registered HSE source ID;
 - is it accurate enough for draft testing?
-- what source is required?
+- is each registered source suitable and current?
 - what wording needs qualification?
 - what wording should be removed?
 - what jurisdiction or local guidance is needed?
 - what review frequency is appropriate?
+
+Three registered HSE pages are past their stated next-review date. Reviewers
+must resolve the choking-prevention, communication, and urgent-illness
+freshness flags before approving dependent claims. A currently published HSE
+document or replacement page may be used when recorded in the source register.
 
 ### Parent-facing language
 
@@ -84,11 +91,12 @@ For each claim within your scope:
 4. Are example summaries appropriately cautious?
 5. What content should Aion never generate without human review?
 
-## Claim review table
+## Claim review
 
-Use one row per issue or claim.
+Use `docs/research/month-06-professional-review-matrix.md` for all claim-level
+decisions. Record supplementary issues below.
 
-| ID | Route/document | Claim or wording | Scope | Risk | Required change | Required source | Decision |
+| Finding ID | Claim ID | Route/document | Issue or wording | Scope | Risk | Required change | Decision |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | PR-001 | — | — | — | — | — | — | Pending |
 
@@ -129,10 +137,10 @@ Month 6 cannot move toward parent reliance if:
 
 - feeding, choking, allergens, sleep, movement, urgent-care, or signposting
   content lacks scoped review;
-- jurisdiction is not confirmed;
+- Irish terminology or professional/emergency routes are inaccurate;
 - source register is incomplete;
+- any source with a passed review date has not been verified;
 - reviewer decisions are undocumented;
 - Aion examples imply diagnosis, assessment, monitoring, or clinical judgement;
 - parent-facing copy hides draft or review status;
 - critical or high findings remain unresolved.
-

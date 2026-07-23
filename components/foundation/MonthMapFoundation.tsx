@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { GrowthMapIcon } from "@/components/GrowthMapIcon";
 import type {
   DevelopmentMonth,
+  MonthEvidenceSource,
   MonthlyContentItem,
   MonthlySupportPack as MonthlySupportPackData,
 } from "@/lib/month-content";
@@ -16,11 +17,22 @@ type PageHeroProps = {
   eyebrow: string;
   title: string;
   body: string;
+  visual?: HeroVisualKind;
   primaryHref?: string;
   primaryLabel?: string;
   secondaryHref?: string;
   secondaryLabel?: string;
 };
+
+export type HeroVisualKind =
+  | "month-map"
+  | "year-one"
+  | "month-six"
+  | "aion"
+  | "membership"
+  | "research"
+  | "safety"
+  | "validation";
 
 export function FoundationPageShell({
   children,
@@ -46,17 +58,55 @@ export function FoundationPageShell({
             Month 6 prototype
           </Link>
         </nav>
+        <details className={styles.mobileNav}>
+          <summary>Menu</summary>
+          <div>
+            <Link href="/months">Year One</Link>
+            <Link href="/aion">Meet Aion</Link>
+            <Link href="/membership">Membership</Link>
+            <Link href="/research">Research</Link>
+            <Link href="/validation/month-6">Validation</Link>
+            <Link href="/safety">Safety</Link>
+            <Link href="/prototype">Month 6 prototype</Link>
+          </div>
+        </details>
       </header>
       <main>{children}</main>
       <footer className={styles.footer}>
-        <div>
-          <strong>DevelopMonth</strong>
-          <span>Child development and parenting, month by month.</span>
+        <div className={styles.footerBrand}>
+          <GrowthMapIcon className={styles.footerIcon} />
+          <div>
+            <strong>DevelopMonth</strong>
+            <span>Child development and parenting, month by month.</span>
+          </div>
         </div>
-        <p>
-          DevelopMonth provides educational and organisational support only. It
-          does not diagnose, assess, treat, or replace professional care.
-        </p>
+        <nav className={styles.footerNav} aria-label="Footer navigation">
+          <div>
+            <span>EXPLORE</span>
+            <Link href="/months">Year One</Link>
+            <Link href="/months/month-6">Month 6</Link>
+            <Link href="/aion">Aion</Link>
+          </div>
+          <div>
+            <span>PROJECT</span>
+            <Link href="/membership">Membership</Link>
+            <Link href="/research">Research</Link>
+            <Link href="/safety">Safety</Link>
+          </div>
+        </nav>
+        <div className={styles.footerBridge}>
+          <span>PregMonth → DevelopMonth</span>
+          <strong>
+            From pregnancy to your child&apos;s development, month by month.
+          </strong>
+        </div>
+        <div className={styles.footerBottom}>
+          <p>
+            DevelopMonth provides educational and organisational support only.
+            It does not diagnose, assess, treat, or replace professional care.
+          </p>
+          <span>© 2026 DevelopMonth</span>
+        </div>
       </footer>
     </div>
   );
@@ -66,6 +116,7 @@ export function PageHero({
   eyebrow,
   title,
   body,
+  visual = "month-map",
   primaryHref,
   primaryLabel,
   secondaryHref,
@@ -90,9 +141,215 @@ export function PageHero({
           </div>
         ) : null}
       </div>
-      <MonthMapVisual />
+      <HeroVisual kind={visual} />
     </section>
   );
+}
+
+function HeroVisual({ kind }: { kind: HeroVisualKind }) {
+  if (kind === "year-one") {
+    return (
+      <div className={`${styles.heroVisual} ${styles.yearOneVisual}`}>
+        <div className={styles.visualTopline}>
+          <span>DEVELOPMONTH YEAR ONE</span>
+          <strong>Month 00–12</strong>
+        </div>
+        <div className={styles.yearOnePath} aria-label="Year One MonthMap">
+          {Array.from({ length: 13 }, (_, month) => (
+            <span
+              className={month === 6 ? styles.activeMonthNode : ""}
+              key={month}
+            >
+              <small>{String(month).padStart(2, "0")}</small>
+              <i aria-hidden="true" />
+            </span>
+          ))}
+        </div>
+        <div className={styles.visualFeature}>
+          <span>FIRST DETAILED PROTOTYPE</span>
+          <strong>Month 6</strong>
+          <p>Starting solids, movement, play, and connection.</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (kind === "month-six") {
+    return (
+      <div className={`${styles.heroVisual} ${styles.monthSixVisual}`}>
+        <div className={styles.visualTopline}>
+          <span>MONTH 06</span>
+          <strong>IRELAND · DRAFT 0.2</strong>
+        </div>
+        <div className={styles.packCover}>
+          <span>MONTHLY SUPPORT PACK</span>
+          <h2>Starting solids and movement</h2>
+          <div>
+            <small>01</small>
+            <p>Starting solids, calmly</p>
+          </div>
+          <div>
+            <small>02</small>
+            <p>Movement through play</p>
+          </div>
+          <div>
+            <small>03</small>
+            <p>Sounds, faces, and connection</p>
+          </div>
+        </div>
+        <div className={styles.visualFootnote}>
+          <span>Sources assembled</span>
+          <span>Review pending</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (kind === "aion") {
+    return (
+      <div className={`${styles.heroVisual} ${styles.aionVisual}`}>
+        <div className={styles.visualTopline}>
+          <span>AION · FUTURE CONCEPT</span>
+          <strong>PARENT CONTROLLED</strong>
+        </div>
+        <div className={styles.aionPrompt}>
+          <span>QUESTION FOR THIS MONTH</span>
+          <p>What play ideas could support movement?</p>
+        </div>
+        <div className={styles.aionAnswer}>
+          <div className={styles.aionIdentity}>
+            <GrowthMapIcon className={styles.aionIcon} />
+            <div>
+              <strong>Aion</strong>
+              <span>Educational support</span>
+            </div>
+          </div>
+          <p>
+            Try a few calm minutes of supervised floor play with something
+            interesting just within comfortable reach.
+          </p>
+          <div>
+            <span>Reviewed monthly content</span>
+            <span>No live AI</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (kind === "membership") {
+    return (
+      <div className={`${styles.heroVisual} ${styles.membershipVisual}`}>
+        <div className={styles.visualTopline}>
+          <span>FOUNDING FAMILY</span>
+          <strong>PREVIEW ONLY</strong>
+        </div>
+        <div className={styles.memberNumber}>
+          <span>FOUNDING PLACE</span>
+          <strong>01</strong>
+          <small>of the first families shaping DevelopMonth</small>
+        </div>
+        <div className={styles.memberBenefits}>
+          <span>Shape the first support packs</span>
+          <span>Join parent research</span>
+          <span>See progress first</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (kind === "research") {
+    return (
+      <div className={`${styles.heroVisual} ${styles.researchVisual}`}>
+        <div className={styles.visualTopline}>
+          <span>MONTH 6 EVIDENCE</span>
+          <strong>IRELAND FIRST</strong>
+        </div>
+        <div className={styles.researchMetrics}>
+          <div>
+            <strong>14</strong>
+            <span>claims mapped</span>
+          </div>
+          <div>
+            <strong>13</strong>
+            <span>HSE sources</span>
+          </div>
+          <div>
+            <strong>0</strong>
+            <span>claims approved</span>
+          </div>
+        </div>
+        <div className={styles.reviewRoute}>
+          <span>Parent research</span>
+          <i aria-hidden="true" />
+          <span>Scoped review</span>
+          <i aria-hidden="true" />
+          <span>Release decision</span>
+        </div>
+        <p>Transparency first. Professional approval still required.</p>
+      </div>
+    );
+  }
+
+  if (kind === "safety") {
+    return (
+      <div className={`${styles.heroVisual} ${styles.safetyVisual}`}>
+        <div className={styles.visualTopline}>
+          <span>SAFETY BY DESIGN</span>
+          <strong>CLEAR BOUNDARIES</strong>
+        </div>
+        <div className={styles.safetyLayers}>
+          <div>
+            <span>01</span>
+            <strong>Parent choice</strong>
+            <small>You decide what support to use.</small>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Reviewed content</strong>
+            <small>Drafts stay visibly unapproved.</small>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Professional guidance</strong>
+            <small>Clear routes when individual help matters.</small>
+          </div>
+        </div>
+        <p>Educational support. Never diagnosis or assessment.</p>
+      </div>
+    );
+  }
+
+  if (kind === "validation") {
+    return (
+      <div className={`${styles.heroVisual} ${styles.validationVisual}`}>
+        <div className={styles.visualTopline}>
+          <span>PROOF MONTH</span>
+          <strong>MONTH 06</strong>
+        </div>
+        <div className={styles.validationSteps}>
+          {[
+            ["01", "Parents", "Usefulness and trust"],
+            ["02", "Professionals", "Accuracy within scope"],
+            ["03", "Sources", "Evidence and freshness"],
+            ["04", "Decision", "Build, revise, or stop"],
+          ].map(([number, label, detail]) => (
+            <div key={number}>
+              <span>{number}</span>
+              <strong>{label}</strong>
+              <small>{detail}</small>
+            </div>
+          ))}
+        </div>
+        <div className={styles.visualFootnote}>
+          <span>Ireland first</span>
+          <span>Infrastructure waits</span>
+        </div>
+      </div>
+    );
+  }
+
+  return <MonthMapVisual />;
 }
 
 export function MonthMapVisual() {
@@ -147,21 +404,89 @@ export function ProfessionalReviewStatus({
       </strong>
       <div>
         <span>Requires professional review</span>
-        <span>Source register required</span>
-        <span>Jurisdiction unconfirmed</span>
+        <span>
+          {month?.sourceStatus === "sources-in-review"
+            ? "Sources assembled · review pending"
+            : "Source register required"}
+        </span>
+        <span>
+          {month?.jurisdiction === "Ireland"
+            ? "Ireland-first jurisdiction"
+            : "Ireland-first planning"}
+        </span>
         <span>Educational support only</span>
+        {month ? <span>Not for parent reliance</span> : null}
       </div>
     </aside>
   );
 }
 
-export function SourceRegisterStatus() {
+export function SourceRegisterStatus({
+  month,
+}: {
+  month?: DevelopmentMonth;
+}) {
   return (
     <div className={styles.sourceStatus}>
       <span>Source register</span>
-      <strong>Required and incomplete</strong>
-      <p>No monthly claim is approved for parent reliance yet.</p>
+      <strong>
+        {month?.sourceStatus === "sources-in-review"
+          ? "Ireland sources assembled · professional review pending"
+          : "Required and incomplete"}
+      </strong>
+      <p>
+        {month?.sourceStatus === "sources-in-review"
+          ? "Claims have source IDs, but no Month 6 claim is approved for parent reliance yet."
+          : "No monthly claim is approved for parent reliance yet."}
+      </p>
     </div>
+  );
+}
+
+export function EvidenceRegister({
+  sources,
+}: {
+  sources: MonthEvidenceSource[];
+}) {
+  const verificationCount = sources.filter(
+    (source) => source.status === "verification-required",
+  ).length;
+
+  return (
+    <section className={styles.evidenceSection} aria-labelledby="evidence-title">
+      <div className={styles.sectionHeading}>
+        <p className={styles.eyebrow}>IRELAND EVIDENCE REGISTER</p>
+        <h2 id="evidence-title">Official guidance behind this draft.</h2>
+        <p>
+          These HSE sources are mapped to individual Month 6 claims. They are
+          provided for transparent review, not as an approval badge.
+        </p>
+      </div>
+      <div className={styles.evidenceSummary}>
+        <strong>{sources.length} HSE sources assembled</strong>
+        <span>{verificationCount} require freshness verification</span>
+        <span>0 claims professionally approved</span>
+      </div>
+      <div className={styles.evidenceGrid}>
+        {sources.map((source) => (
+          <article key={source.id}>
+            <div>
+              <span>{source.id}</span>
+              <span>
+                {source.status === "verification-required"
+                  ? "Verify before approval"
+                  : "Review pending"}
+              </span>
+            </div>
+            <h3>{source.title}</h3>
+            <p>Supports {source.supports.join(", ")}</p>
+            <a href={source.url} rel="noreferrer" target="_blank">
+              Read on HSE.ie <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -325,6 +650,44 @@ export function CompanionCard({
           Static examples only. Aion is not live and does not diagnose, assess,
           monitor, or replace professional guidance.
         </small>
+      </div>
+    </section>
+  );
+}
+
+export function FeatureBand({
+  eyebrow,
+  title,
+  body,
+  items,
+  tone = "aqua",
+}: {
+  eyebrow: string;
+  title: string;
+  body: string;
+  items: Array<{ number: string; title: string; body: string }>;
+  tone?: "aqua" | "sage" | "lime" | "teal";
+}) {
+  return (
+    <section
+      className={`${styles.featureBand} ${styles[`featureTone_${tone}`]}`}
+      aria-labelledby={`feature-${eyebrow.toLowerCase().replaceAll(" ", "-")}`}
+    >
+      <div className={styles.featureBandIntro}>
+        <p className={styles.eyebrow}>{eyebrow}</p>
+        <h2 id={`feature-${eyebrow.toLowerCase().replaceAll(" ", "-")}`}>
+          {title}
+        </h2>
+        <p>{body}</p>
+      </div>
+      <div className={styles.featureBandGrid}>
+        {items.map((item) => (
+          <article key={item.number}>
+            <span>{item.number}</span>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))}
       </div>
     </section>
   );

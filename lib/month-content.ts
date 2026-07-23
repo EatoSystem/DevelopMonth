@@ -25,6 +25,8 @@ export type MonthlyContentItem = {
   body: string;
   companionShortAnswer: string;
   relatedQuestions: string[];
+  claimIds: string[];
+  sourceIds: string[];
   safetyLevel: ContentSafetyLevel;
   sourceStatus: ContentSourceStatus;
   reviewStatus: ContentReviewStatus;
@@ -71,8 +73,22 @@ export type MonthlySupportPack = {
     colour: SupportPackColour;
     summary: string;
     ideas: string[];
+    claimIds: string[];
+    sourceIds: string[];
   }>;
   safetyNote: string;
+};
+
+export type MonthEvidenceSource = {
+  id: string;
+  publisher: "Health Service Executive";
+  title: string;
+  url: string;
+  supports: string[];
+  lastReviewed: string;
+  nextReviewDue: string;
+  accessedAt: string;
+  status: "current-source-review-pending" | "verification-required";
 };
 
 type MonthSeed = {
@@ -87,7 +103,7 @@ const draftStatus = {
   sourceStatus: "source-register-required" as const,
   professionalReviewStatus: "requires-professional-review" as const,
   lastReviewedAt: null,
-  jurisdiction: "Unconfirmed",
+  jurisdiction: "Ireland",
 };
 
 const monthSeeds: MonthSeed[] = [
@@ -248,81 +264,260 @@ function createDraftMonth(seed: MonthSeed): DevelopmentMonth {
 
 export const developMonthYearOne = monthSeeds.map(createDraftMonth);
 
+export const monthSixIrelandSources: MonthEvidenceSource[] = [
+  {
+    id: "HSE-WEAN-START-2025",
+    publisher: "Health Service Executive",
+    title: "When to start weaning",
+    url: "https://www2.hse.ie/babies-children/weaning-eating/weaning/when-to-start/",
+    supports: ["M6-01", "M6-02", "M6-03"],
+    lastReviewed: "2025-11-11",
+    nextReviewDue: "2028-11-11",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-WEAN-HOW-2025",
+    publisher: "Health Service Executive",
+    title: "How to start weaning",
+    url: "https://www2.hse.ie/babies-children/weaning-eating/weaning/how-to-start/",
+    supports: ["M6-04", "M6-07"],
+    lastReviewed: "2025-05-12",
+    nextReviewDue: "2028-05-12",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-WEAN-NUTRIENTS-2025",
+    publisher: "Health Service Executive",
+    title: "Nutrients your baby needs during weaning",
+    url: "https://www2.hse.ie/babies-children/weaning-eating/weaning/vitamins-minerals/",
+    supports: ["M6-03"],
+    lastReviewed: "2025-08-28",
+    nextReviewDue: "2028-08-28",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-FOOD-ALLERGY-2023",
+    publisher: "Health Service Executive",
+    title: "Food allergies and children",
+    url: "https://www2.hse.ie/babies-children/weaning-eating/allergies-fussy-eating/food-allergies/",
+    supports: ["M6-05"],
+    lastReviewed: "2023-11-29",
+    nextReviewDue: "2026-11-29",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-CHOKING-2022",
+    publisher: "Health Service Executive",
+    title: "Food choking risks for babies and children",
+    url: "https://www2.hse.ie/babies-children/child-safety/choking-strangulation-suffocation/food-choking-risks/",
+    supports: ["M6-06", "M6-07"],
+    lastReviewed: "2022-10-14",
+    nextReviewDue: "2025-10-14",
+    accessedAt: "2026-07-23",
+    status: "verification-required",
+  },
+  {
+    id: "HSE-TUMMY-TIME-2026",
+    publisher: "Health Service Executive",
+    title: "Tummy time for babies",
+    url: "https://www2.hse.ie/babies-children/parenting-advice/caring-for-a-new-baby/tummy-time/",
+    supports: ["M6-08"],
+    lastReviewed: "2026-05-17",
+    nextReviewDue: "2029-06-17",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-MILESTONES-0-6-2025",
+    publisher: "Health Service Executive",
+    title: "Your child's developmental milestones from 0 to 6 months",
+    url: "https://www2.hse.ie/babies-children/checks-milestones/developmental-milestones/0-6-months/",
+    supports: ["M6-09", "M6-14"],
+    lastReviewed: "2025-05-08",
+    nextReviewDue: "2028-05-08",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-COMMUNICATION-0-12-2023",
+    publisher: "Health Service Executive",
+    title: "Helping your child's communication development: 0 to 12 months",
+    url: "https://www2.hse.ie/babies-children/checks-milestones/communication-development/0-12-months/",
+    supports: ["M6-10"],
+    lastReviewed: "2023-03-29",
+    nextReviewDue: "2026-03-29",
+    accessedAt: "2026-07-23",
+    status: "verification-required",
+  },
+  {
+    id: "HSE-BABY-CUES-2026",
+    publisher: "Health Service Executive",
+    title: "Responding to your baby's cues",
+    url: "https://www2.hse.ie/babies-children/parenting-advice/baby-and-child-mental-wellbeing/responding-to-baby-cues/",
+    supports: ["M6-04", "M6-11"],
+    lastReviewed: "2026-04-10",
+    nextReviewDue: "2029-04-10",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-SLEEP-6M-2Y-2026",
+    publisher: "Health Service Executive",
+    title: "Child's sleep needs at 6 months to 2 years",
+    url: "https://www2.hse.ie/babies-children/sleep/childs-sleep-needs-6-months-2-years/",
+    supports: ["M6-12"],
+    lastReviewed: "2026-03-27",
+    nextReviewDue: "2029-03-27",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-CHILD-SAFETY-MANUAL-2026",
+    publisher: "Health Service Executive",
+    title: "Child Safety Programme Manual for health professionals",
+    url: "https://www.hse.ie/eng/about/who/healthwellbeing/our-priority-programmes/child-health-and-wellbeing/csp-manual.pdf",
+    supports: ["M6-06", "M6-12"],
+    lastReviewed: "2026",
+    nextReviewDue: "Not stated",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+  {
+    id: "HSE-URGENT-CHILD-2023",
+    publisher: "Health Service Executive",
+    title: "Get urgent medical help if your child is very unwell",
+    url: "https://www2.hse.ie/babies-children/parenting-advice/caring-for-a-child/baby-child-seriously-unwell/",
+    supports: ["M6-14"],
+    lastReviewed: "2023-07-14",
+    nextReviewDue: "2026-07-14",
+    accessedAt: "2026-07-23",
+    status: "verification-required",
+  },
+  {
+    id: "HSE-BRAIN-DEVELOPMENT-2025",
+    publisher: "Health Service Executive",
+    title: "Supporting your child's brain development",
+    url: "https://www2.hse.ie/babies-children/checks-milestones/physical-development/supporting-brain-development/",
+    supports: ["M6-10", "M6-11", "M6-13"],
+    lastReviewed: "2025-07-16",
+    nextReviewDue: "2028-07-16",
+    accessedAt: "2026-07-23",
+    status: "current-source-review-pending",
+  },
+];
+
 export const monthSixSupportPack: MonthlySupportPack = {
   month: 6,
   title: "Starting solids and movement",
   introduction:
-    "Month 6 can bring new tastes, stronger movement, growing curiosity, and more back-and-forth connection. This pack keeps starting solids and movement positive, practical, and family-centred.",
+    "Around Month 6, many families begin exploring solid foods while movement, sounds, curiosity, and connection keep growing. Every child develops differently, so use these Ireland-first ideas as calm educational support rather than a timetable or test.",
   themes: [
     {
-      title: "Growing through play",
-      colour: "aqua",
-      summary:
-        "Use floor time, reaching games, songs, and face-to-face play to support curiosity, shared attention, and joyful repetition.",
-      ideas: [
-        "Place a favourite toy just within comfortable reach.",
-        "Copy sounds and expressions, then pause for a response.",
-        "Offer supervised floor play in short, enjoyable bursts.",
-      ],
-    },
-    {
-      title: "Feeding and new textures",
+      title: "Starting solids, calmly",
       colour: "sage",
       summary:
-        "Explore suitable foods and textures at your child’s pace while keeping milk feeds central to their nutrition.",
+        "Look for readiness around 6 months and begin at your child's pace. Breast milk or first infant formula continues while suitable foods and textures are introduced.",
       ideas: [
-        "Choose a calm time when your child is alert and supported upright.",
-        "Let touching, smelling, and exploring food be part of learning.",
-        "Follow current local guidance on allergens, choking prevention, and safe preparation.",
+        "Choose a calm time when your child is alert, supported upright, and supervised.",
+        "Let touching, smelling, and tasting be part of learning; never force a mouthful.",
+        "Include suitable iron-rich foods and ask your GP or public health nurse if you are unsure about readiness.",
+      ],
+      claimIds: ["M6-01", "M6-02", "M6-03", "M6-04", "M6-07"],
+      sourceIds: [
+        "HSE-WEAN-START-2025",
+        "HSE-WEAN-HOW-2025",
+        "HSE-WEAN-NUTRIENTS-2025",
+        "HSE-BABY-CUES-2026",
       ],
     },
     {
-      title: "Movement and strength",
-      colour: "lime",
-      summary:
-        "Everyday reaching, rolling, supported sitting, and floor play can help build strength and coordination without turning movement into a test.",
-      ideas: [
-        "Give your child space to move freely on a safe floor surface.",
-        "Place objects on both sides to invite turning and reaching.",
-        "Keep movement playful rather than treating it as a test.",
-      ],
-    },
-    {
-      title: "Sleep and rhythm",
+      title: "Allergens and safer eating",
       colour: "teal",
       summary:
-        "Sleep can continue to change as feeding, movement, and daily routines evolve, so gentle rhythm matters more than perfect patterns.",
+        "Food preparation, seating, supervision, and current Irish allergen guidance all matter when new foods are introduced.",
       ideas: [
-        "Use a short, familiar wind-down routine.",
-        "Notice patterns without expecting every day to look the same.",
-        "Follow current safer-sleep guidance for every sleep.",
+        "Follow current HSE guidance when introducing common allergens, especially if your child has eczema or a known allergy.",
+        "Prepare food in an age-appropriate texture and shape, and stay with your child while they eat.",
+        "Use the linked HSE sources as a starting point; this section still requires dietetic and child-safety review.",
+      ],
+      claimIds: ["M6-05", "M6-06", "M6-07"],
+      sourceIds: [
+        "HSE-FOOD-ALLERGY-2023",
+        "HSE-CHOKING-2022",
+        "HSE-CHILD-SAFETY-MANUAL-2026",
       ],
     },
     {
-      title: "Bonding and confidence",
+      title: "Movement through play",
+      colour: "lime",
+      summary:
+        "Supervised floor and tummy play can make reaching, rolling, turning, and supported sitting enjoyable without turning movement into a scorecard.",
+      ideas: [
+        "Offer awake, supervised play on a firm, clear floor surface.",
+        "Place objects on both sides to invite turning and reaching.",
+        "Pause when your child has had enough and return later; comfort and connection matter more than duration.",
+      ],
+      claimIds: ["M6-08", "M6-09"],
+      sourceIds: ["HSE-TUMMY-TIME-2026", "HSE-MILESTONES-0-6-2025"],
+    },
+    {
+      title: "Sounds, faces, and connection",
       colour: "aqua",
       summary:
-        "Warm responses, shared delight, and familiar routines help your child feel secure while strengthening parent confidence.",
+        "Face-to-face talk, copying sounds, shared attention, and responsive play support communication and bonding in ordinary family moments.",
       ideas: [
-        "Name what your child is looking at or reaching towards.",
-        "Celebrate effort and connection rather than outcomes.",
-        "Share care in ways that work for your family and support network.",
+        "Follow what your child is looking at and put simple words around it.",
+        "Copy a sound or expression, then pause to leave room for a response.",
+        "Use the language that feels most natural in your family.",
+      ],
+      claimIds: ["M6-10", "M6-11"],
+      sourceIds: [
+        "HSE-COMMUNICATION-0-12-2023",
+        "HSE-BABY-CUES-2026",
+        "HSE-BRAIN-DEVELOPMENT-2025",
       ],
     },
     {
-      title: "Questions to ask",
+      title: "Sleep and family rhythm",
+      colour: "teal",
+      summary:
+        "Sleep patterns vary. A familiar wind-down and current Irish safer-sleep guidance can support a calm rhythm without promising a perfect routine.",
+      ideas: [
+        "Use a short, familiar sequence before sleep where that works for your family.",
+        "Notice patterns without expecting every day or night to look the same.",
+        "Ask your GP or public health nurse if sleep is affecting your child's wellbeing or your ability to cope.",
+      ],
+      claimIds: ["M6-12", "M6-13"],
+      sourceIds: [
+        "HSE-SLEEP-6M-2Y-2026",
+        "HSE-CHILD-SAFETY-MANUAL-2026",
+        "HSE-BRAIN-DEVELOPMENT-2025",
+      ],
+    },
+    {
+      title: "Questions and support",
       colour: "sage",
       summary:
-        "Keep a calm list for your GP, public health nurse, paediatrician, therapist, or care team.",
+        "You do not need to interpret every change alone. Save practical questions for your GP, public health nurse, paediatrician, dietitian, therapist, or care team.",
       ideas: [
-        "What textures and foods are suitable to try next?",
-        "How can we support movement comfortably during everyday play?",
-        "Is there anything in feeding, sleep, movement, or communication we should discuss?",
+        "What readiness signs, textures, allergens, or iron-rich foods should we discuss?",
+        "How can we support movement, communication, sleep, and play comfortably?",
+        "If your child loses a skill, you are worried about development, or your child is unwell, contact an appropriate professional; call 112 or 999 for a life-threatening emergency.",
+      ],
+      claimIds: ["M6-13", "M6-14"],
+      sourceIds: [
+        "HSE-MILESTONES-0-6-2025",
+        "HSE-URGENT-CHILD-2023",
+        "HSE-BRAIN-DEVELOPMENT-2025",
       ],
     },
   ],
   safetyNote:
-    "This support pack is educational and does not replace professional medical advice, diagnosis, developmental assessment, or treatment.",
+    "Ireland-first draft for research and scoped professional review. This educational support pack is not approved for parent reliance and does not replace advice from your GP, public health nurse, paediatrician, dietitian, therapist, or care team.",
 };
 
 const monthSixIndex = developMonthYearOne.findIndex(
@@ -331,16 +526,18 @@ const monthSixIndex = developMonthYearOne.findIndex(
 
 developMonthYearOne[monthSixIndex] = {
   ...developMonthYearOne[monthSixIndex],
+  overview:
+    "Around Month 6, many families begin exploring solid foods while movement, sounds, play, and connection keep growing. This Ireland-first draft offers calm ideas, not a timetable or milestone test.",
   movement:
-    "Reaching, rolling, supported sitting, and comfortable floor play can offer enjoyable ways to build strength.",
+    "Awake, supervised floor and tummy play can make reaching, rolling, turning, and supported sitting enjoyable without turning movement into a scorecard.",
   feeding:
-    "New tastes and textures can be explored gradually, following current local feeding and safety guidance.",
+    "Around 6 months, suitable foods and textures can be introduced gradually alongside breast milk or first infant formula, following current HSE guidance and your child's readiness.",
   sleep:
-    "Sleep rhythms may continue to change as feeding, movement, and daily routines evolve.",
+    "Sleep patterns vary; a familiar wind-down and current Irish safer-sleep guidance can support family rhythm without promising a perfect routine.",
   communication:
-    "Sounds, expressions, shared attention, and back-and-forth play can make everyday interaction feel increasingly lively.",
+    "Face-to-face talk, copied sounds, shared attention, and pauses for response can make everyday communication lively and connected.",
   bonding:
-    "Warm responses, shared delight, and familiar routines can support connection and parent confidence.",
+    "Following your child's cues, sharing delight, and responding warmly can support connection and parent confidence.",
   play:
     "Reaching games, songs, floor play, and face-to-face moments can support curiosity without pressure.",
   sensory:
@@ -350,14 +547,14 @@ developMonthYearOne[monthSixIndex] = {
   familyRhythm:
     "Bring feeding, play, rest, reminders, and questions together in a rhythm that works for the whole family.",
   thingsToNotice: [
-    "Notice the sounds, movements, expressions, and shared moments your child enjoys.",
-    "Save questions without turning observations into scores or pass/fail milestones.",
+    "Notice the tastes, sounds, movements, expressions, and shared moments your child enjoys.",
+    "Development varies. Save questions without turning observations into scores, deadlines, or pass/fail milestones.",
   ],
   questionsToSave: [
     "How can I make starting solids feel calm?",
-    "What should I ask if feeding feels stressful?",
-    "How much floor play is useful at this stage?",
-    "What should I mention at the next health check?",
+    "Which allergens, textures, and iron-rich foods should we discuss?",
+    "How can we make supervised floor play comfortable?",
+    "What should I mention to my GP or public health nurse?",
   ],
   journalPrompts: [
     "What small win made you smile this week?",
@@ -376,6 +573,14 @@ developMonthYearOne[monthSixIndex] = {
     "How can I support feeding and sleep rhythms this month?",
     "What small wins could I notice this week?",
   ],
+  askForGuidance:
+    "Contact your GP or public health nurse if you are unsure about feeding readiness, allergens, movement, communication, sleep, or any change that worries you. If your child loses a skill, seek professional guidance. Call 112 or 999 for a life-threatening emergency.",
+  safetyNotes:
+    "Ireland-first educational draft for research only. It is not approved for parent reliance and does not replace guidance from your GP, public health nurse, paediatrician, dietitian, therapist, or care team.",
+  sourceStatus: "sources-in-review",
+  professionalReviewStatus: "requires-professional-review",
+  lastReviewedAt: null,
+  jurisdiction: "Ireland",
 };
 
 export const monthSixDevelopmentMonth =
@@ -398,10 +603,12 @@ export const monthSixKnowledgeItems: MonthlyContentItem[] = [
       "How much floor play is useful at this stage?",
       "How can we support movement comfortably?",
     ],
+    claimIds: ["M6-08", "M6-09"],
+    sourceIds: ["HSE-TUMMY-TIME-2026", "HSE-MILESTONES-0-6-2025"],
     safetyLevel: "general",
-    sourceStatus: "source-register-required",
+    sourceStatus: "sources-in-review",
     reviewStatus: "requires-professional-review",
-    jurisdiction: "Unconfirmed",
+    jurisdiction: "Ireland",
     lastReviewedAt: null,
   },
   {
@@ -418,12 +625,21 @@ export const monthSixKnowledgeItems: MonthlyContentItem[] = [
       "Offer calm opportunities to explore suitable foods and ask for guidance when you need it.",
     relatedQuestions: [
       "How can starting solids feel calm?",
-      "Which local guidance should we follow?",
+      "Which HSE guidance should we follow?",
+    ],
+    claimIds: ["M6-01", "M6-02", "M6-03", "M6-04", "M6-05", "M6-06", "M6-07"],
+    sourceIds: [
+      "HSE-WEAN-START-2025",
+      "HSE-WEAN-HOW-2025",
+      "HSE-WEAN-NUTRIENTS-2025",
+      "HSE-FOOD-ALLERGY-2023",
+      "HSE-CHOKING-2022",
+      "HSE-BABY-CUES-2026",
     ],
     safetyLevel: "review-required",
-    sourceStatus: "source-register-required",
+    sourceStatus: "sources-in-review",
     reviewStatus: "requires-professional-review",
-    jurisdiction: "Unconfirmed",
+    jurisdiction: "Ireland",
     lastReviewedAt: null,
   },
   {
@@ -442,10 +658,16 @@ export const monthSixKnowledgeItems: MonthlyContentItem[] = [
       "What shared moments could I notice?",
       "How can play support connection?",
     ],
+    claimIds: ["M6-10", "M6-11"],
+    sourceIds: [
+      "HSE-COMMUNICATION-0-12-2023",
+      "HSE-BABY-CUES-2026",
+      "HSE-BRAIN-DEVELOPMENT-2025",
+    ],
     safetyLevel: "general",
-    sourceStatus: "source-register-required",
+    sourceStatus: "sources-in-review",
     reviewStatus: "requires-professional-review",
-    jurisdiction: "Unconfirmed",
+    jurisdiction: "Ireland",
     lastReviewedAt: null,
   },
   {
@@ -464,10 +686,17 @@ export const monthSixKnowledgeItems: MonthlyContentItem[] = [
       "What would make this month feel more manageable?",
       "Which reminder would genuinely help?",
     ],
+    claimIds: ["M6-12", "M6-13", "M6-14"],
+    sourceIds: [
+      "HSE-SLEEP-6M-2Y-2026",
+      "HSE-CHILD-SAFETY-MANUAL-2026",
+      "HSE-MILESTONES-0-6-2025",
+      "HSE-URGENT-CHILD-2023",
+    ],
     safetyLevel: "general",
-    sourceStatus: "source-register-required",
+    sourceStatus: "sources-in-review",
     reviewStatus: "requires-professional-review",
-    jurisdiction: "Unconfirmed",
+    jurisdiction: "Ireland",
     lastReviewedAt: null,
   },
 ];

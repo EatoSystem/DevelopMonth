@@ -35,9 +35,9 @@ const packContents = [
   {
     label: "03",
     type: "Source register",
-    title: "Every material claim needs evidence",
+    title: "Ireland sources assembled, review pending",
     body:
-      "The Month 6 source register must record authoritative sources, jurisdiction, access dates, limitations, reviewer decisions, and next review dates.",
+      "Each material claim now maps to an HSE source ID, access date, freshness status, and review route. Mapping is not professional approval.",
   },
   {
     label: "04",
@@ -54,6 +54,7 @@ const parentTasks = [
   "Preview journal, calendar, check-in, support pack, Aion, and summary.",
   "Explain what is optional, what is fictional, and what is not saved.",
   "Describe when they would seek professional guidance.",
+  "Explain that Ireland is the first jurisdiction and identify the HSE source links.",
 ];
 
 const professionalTasks = [
@@ -83,6 +84,7 @@ export default function MonthSixValidationPage() {
         secondaryHref="/months/month-6"
         secondaryLabel="Review the Month 6 pack"
         title="Validate one excellent month before building the system."
+        visual="validation"
       />
       <PreviewOnlyNotice />
       <ProfessionalReviewStatus month={monthSixDevelopmentMonth} />
@@ -148,7 +150,7 @@ export default function MonthSixValidationPage() {
         </ol>
       </section>
 
-      <SourceRegisterStatus />
+      <SourceRegisterStatus month={monthSixDevelopmentMonth} />
 
       <section className={styles.sourceStatus} aria-label="Internal documents">
         <span>Internal validation documents</span>

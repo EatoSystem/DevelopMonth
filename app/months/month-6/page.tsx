@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {
   CalendarIdeas,
   CompanionCard,
+  EvidenceRegister,
   FoundationPageShell,
   JournalPrompts,
   MonthlyKnowledgeGrid,
@@ -15,6 +16,7 @@ import {
 } from "@/components/foundation/MonthMapFoundation";
 import {
   monthSixDevelopmentMonth,
+  monthSixIrelandSources,
   monthSixKnowledgeItems,
   monthSixSupportPack,
 } from "@/lib/month-content";
@@ -36,6 +38,7 @@ export default function MonthSixPage() {
         secondaryHref="/aion"
         secondaryLabel="Meet the future Aion concept"
         title="Starting solids and movement."
+        visual="month-six"
       />
       <PreviewOnlyNotice />
       <ProfessionalReviewStatus month={monthSixDevelopmentMonth} />
@@ -48,7 +51,8 @@ export default function MonthSixPage() {
         compact
         prompts={monthSixDevelopmentMonth.companionPrompts}
       />
-      <SourceRegisterStatus />
+      <EvidenceRegister sources={monthSixIrelandSources} />
+      <SourceRegisterStatus month={monthSixDevelopmentMonth} />
       <SafetyBoundary />
     </FoundationPageShell>
   );

@@ -3,7 +3,8 @@
 **Report date:** 6 July 2026  
 **Code baseline:** `1534fe6` — Replace DevelopMonth icon across site  
 **Current stage:** Deployed, password-gated pre-MVP concept  
-**Primary market assumption:** Ireland-first, not yet formally approved  
+**First content jurisdiction:** Ireland, confirmed for the validation phase;
+professional content approval still pending
 
 ## 1. Executive summary
 
@@ -235,7 +236,7 @@ and urgent-care boundaries require qualified, jurisdiction-specific review.
 The draft should remain clearly marked as prototype content until:
 
 - Sources are recorded
-- Ireland is confirmed as the initial jurisdiction
+- Ireland is shown consistently as the initial jurisdiction
 - Scoped reviewers sign off
 - Changes are resolved
 - A next-review date is assigned
@@ -427,8 +428,8 @@ accessible layer. This should remain a hypothesis until tested.
 - Assign product, editorial, research, privacy, and professional-review owners
 - Complete real-device and accessibility testing of the static prototype
 - Recruit parent and professional participants
-- Create a Month 6 source register
-- Confirm initial jurisdiction
+- Complete scoped review of the Month 6 source register
+- Verify the three HSE sources beyond their stated review date
 
 **Exit condition:** prototype and research operations are trustworthy and
 ready for moderated sessions.

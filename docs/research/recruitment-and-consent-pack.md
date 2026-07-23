@@ -4,6 +4,10 @@ Use this pack to recruit real parent and professional participants for the
 password-gated Month 6 prototype. Adapt it with reviewed legal/privacy wording
 before collecting personal information.
 
+This research round is Ireland-first. Recruitment, consent, recording, data
+handling, incentives, withdrawal, and complaints wording must be reviewed for
+the actual Irish study setup before invitations are sent.
+
 ## Parent invitation
 
 Subject: Help shape DevelopMonth’s Month 6 parent-support prototype
@@ -12,6 +16,9 @@ DevelopMonth is creating positive child-development and parenting support,
 month by month. We are inviting parents and primary carers to test a static
 Month 6 concept covering monthly guidance, a journal, calendar, check-in,
 support pack, Aion concept, and family summary.
+
+The draft uses Irish HSE sources and Irish professional routes. It has not been
+professionally approved and should not be used as guidance for a real child.
 
 The session lasts approximately 45 minutes. We are testing the product—not you
 or your child. The prototype uses a fictional child profile, stores nothing,
@@ -33,6 +40,10 @@ DevelopMonth is seeking professional reviewers for a static Month 6
 child-development and parenting concept. We are testing product boundaries,
 parent-facing language, practical activities, and gentle signposting before
 building accounts or personal-data infrastructure.
+
+Ireland is the first jurisdiction. Reviewers will receive the 14-claim matrix
+and HSE source register and will be asked to decide only within their declared
+scope.
 
 We are looking for feedback only within your professional scope. The session
 lasts approximately 45–60 minutes. We will record the content version, review
@@ -60,6 +71,8 @@ Before the session, confirm:
 - How withdrawal works.
 - Any payment, voucher, or professional fee.
 - Research contact and complaints route.
+- Confirmation that the Irish study's privacy and consent wording has been
+  reviewed before collecting contact details or recordings.
 
 ## Verbal opening
 
@@ -68,7 +81,8 @@ you. This prototype uses a fictional child and does not save anything. Please
 do not share identifiable or sensitive information about a real child. You can
 skip any task or stop at any time. DevelopMonth is educational and does not
 replace professional medical advice, diagnosis, developmental assessment, or
-treatment.”
+treatment. Ireland is the first jurisdiction for this draft. Its HSE sources
+are assembled for review, but the content is not professionally approved.”
 
 ## Recording decision
 

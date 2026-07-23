@@ -143,8 +143,8 @@ function MonthSixReviewStatus() {
       <strong>Month 6 · Draft content</strong>
       <div>
         <span>Requires professional review</span>
-        <span>Source register required</span>
-        <span>Jurisdiction to be confirmed</span>
+        <span>Sources assembled · review pending</span>
+        <span>Ireland-first jurisdiction</span>
         <span>Not for parent reliance yet</span>
       </div>
     </aside>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  FeatureBand,
   FoundationPageShell,
   PageHero,
   PreviewOnlyNotice,
@@ -25,10 +26,39 @@ export default function SafetyPage() {
         secondaryHref="/"
         secondaryLabel="Return to the homepage"
         title="Clear boundaries. Calm support."
+        visual="safety"
       />
       <PreviewOnlyNotice />
       <ProfessionalReviewStatus />
       <SourceRegisterStatus />
+      <FeatureBand
+        body="Safety is not a disclaimer added at the end. It shapes the information, the visual status, the action language, and the route to appropriate professional help."
+        eyebrow="FOUR CLEAR BOUNDARIES"
+        items={[
+          {
+            number: "01",
+            title: "Education",
+            body: "DevelopMonth can explain reviewed information and organise practical questions.",
+          },
+          {
+            number: "02",
+            title: "Parent control",
+            body: "Families choose what to read, what to add, and which suggestions feel useful.",
+          },
+          {
+            number: "03",
+            title: "Professional guidance",
+            body: "Individual concerns belong with a GP, public health nurse, paediatrician, therapist, or care team.",
+          },
+          {
+            number: "04",
+            title: "Urgent help",
+            body: "Life-threatening emergencies must route clearly to 112 or 999 in Ireland.",
+          },
+        ]}
+        title="Support stays useful when its limits stay visible."
+        tone="teal"
+      />
       <SafetyBoundary />
     </FoundationPageShell>
   );

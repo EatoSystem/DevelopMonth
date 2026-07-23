@@ -1,5 +1,4 @@
 import Image from "next/image";
-import pregMonthIcon from "../PregMonth - Icon.png";
 
 type BumpMapIconProps = {
   size?: number | string;
@@ -25,7 +24,10 @@ export function BumpMapIcon({
   return (
     <Image
       className={`bump-map-icon ${className}`}
-      src={pregMonthIcon}
+      src="/brand/pregmonth-icon.png"
+      width={1250}
+      height={1250}
+      unoptimized
       alt={ariaLabel ?? ""}
       aria-hidden={ariaLabel ? undefined : true}
       priority={priority}

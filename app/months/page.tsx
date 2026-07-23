@@ -27,6 +27,7 @@ export default function MonthsPage() {
         secondaryHref="/prototype"
         secondaryLabel="Open the product prototype"
         title="Year One support, month by month."
+        visual="year-one"
       />
       <PreviewOnlyNotice />
       <ProfessionalReviewStatus />
